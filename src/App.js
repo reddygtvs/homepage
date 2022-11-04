@@ -9,7 +9,7 @@ const App = () => {
         </h1>
       </div>
       <div>
-        <h3>git | React | node.js | Express | Cloudflare | Fly.io</h3>
+        <h3>Git | React | Node.js | Express | Cloudflare | Fly.io</h3>
       </div>
       <div className="Horizon">
         <a
