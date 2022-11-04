@@ -3,8 +3,13 @@ import "./App.css";
 const App = () => {
   return (
     <div id="control" className="App">
-      <div className="App-header">
-        <h1>Hi, I'm Tushar :)</h1>
+      <div className="typing-demo">
+        <h1>
+          Hi, I'm Tushar <span class="dot">:)</span>
+        </h1>
+      </div>
+      <div>
+        <h3>git | React | node.js | Express | Cloudflare | Fly.io</h3>
       </div>
       <div className="Horizon">
         <a
