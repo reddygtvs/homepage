@@ -4,7 +4,7 @@ import pdf from "./pdf/tushar-resume.pdf";
 const App = () => {
   return (
     <div id="control" className="App">
-      <div className="typing-demo">
+      <div className="horizon">
         <h1>
           Hi, I'm Tushar <span class="dot">:)</span>
         </h1>
@@ -41,7 +41,6 @@ const App = () => {
         <a
           className="App-link"
           href={pdf}
-          download
           target="_blank"
           rel="noopener noreferrer"
         >
