@@ -41,6 +41,7 @@ const App = () => {
         <a
           className="App-link"
           href={pdf}
+          download
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -49,7 +50,7 @@ const App = () => {
 
         <a
           className="App-link"
-          href="mailto:name@email.com"
+          href="mailto:reddygtvs@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
