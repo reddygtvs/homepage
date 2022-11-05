@@ -1,4 +1,5 @@
 import "./App.css";
+import pdf from "./pdf/tushar-resume.pdf";
 
 const App = () => {
   return (
@@ -9,14 +10,7 @@ const App = () => {
         </h1>
       </div>
       <div>
-        <h3>
-          Git <span class="dot"> |</span>
-          React <span class="dot"> | </span>
-          Node.js <span class="dot"> | </span>
-          Express <span class="dot"> | </span>
-          Cloudflare <span class="dot"> | </span>
-          Fly.io
-        </h3>
+        <h3>Git | React | Node.js | Express | Cloudflare | Fly.io</h3>
       </div>
       <div className="Horizon">
         <a
@@ -26,15 +20,6 @@ const App = () => {
           rel="noopener noreferrer"
         >
           ./Github
-        </a>
-
-        <a
-          className="App-link"
-          href="https://phonebook.tusharreddy.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Phonebook
         </a>
 
         <a
@@ -52,6 +37,14 @@ const App = () => {
           rel="noopener noreferrer"
         >
           @Twitter
+        </a>
+        <a
+          className="App-link"
+          href={pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
         </a>
 
         <a
