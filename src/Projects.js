@@ -1,9 +1,14 @@
 import React from "react";
+import CardReact from "./CardReact";
 
 const Projects = () => {
   return (
-    <div className="App">
-      <h1>Projects</h1>
+    <div id="control" className="App">
+      <div className="Horizon">
+        <CardReact />
+
+        <CardReact />
+      </div>
     </div>
   );
 };
