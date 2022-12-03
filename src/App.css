@@ -14,7 +14,7 @@ html {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  min-height: 85vh;
+  min-height: 80vh;
 }
 .horizon {
   display: flex;
