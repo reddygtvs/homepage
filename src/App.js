@@ -7,10 +7,6 @@ import Button from "react-bootstrap/Button";
 const App = () => {
   return (
     <div>
-      <div id="navbar">
-        <BasicExample />
-      </div>
-
       <div id="control" className="App">
         <div className="horizon">
           <h1>
