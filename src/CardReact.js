@@ -18,7 +18,7 @@ const CardReact = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Go somewhere
+          Take me there
         </Button>
       </Card.Body>
     </Card>
