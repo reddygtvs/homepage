@@ -18,7 +18,7 @@ const App = () => {
           </h1>
         </div>
         <div>
-          <h3>Git | React | Node.js | Express | Cloudflare | Fly.io</h3>
+          <h3>React | Node.js | Express | MongoDB | Cloudflare</h3>
         </div>
         <div className="Horizon">
           <a
