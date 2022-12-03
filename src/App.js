@@ -32,16 +32,9 @@ const App = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn
+            @LinkedIn
           </a>
-          <a
-            className="App-link"
-            href="https://twitter.com/reddygtvs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @Twitter
-          </a>
+
           <a
             className="App-link"
             href={pdf}
