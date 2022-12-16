@@ -6,8 +6,6 @@ const Projects = () => {
     <div id="control" className="App">
       <div className="Horizon">
         <CardReact />
-
-        <CardReact />
       </div>
     </div>
   );
