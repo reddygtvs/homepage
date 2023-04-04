@@ -1,6 +1,7 @@
 import React from "react";
 import CardReact from "./CardReact";
 import phonebook from "./images/phonebook.png";
+import countries from "./images/country.png";
 
 const Projects = () => {
   const phonebookData = {
@@ -9,10 +10,17 @@ const Projects = () => {
     href: "https://phonebook.tusharreddy.com",
     img: phonebook,
   };
+  const countryData = {
+    title: "CountryAPI",
+    text: "React App used to fetch the Country/Weather data using external APIs",
+    href: "https://countries.tusharreddy.com",
+    img: countries,
+  };
   return (
     <div id="control" className="App">
       <div className="Horizon">
         <CardReact {...phonebookData} />
+        <CardReact {...countryData} />
       </div>
     </div>
   );
