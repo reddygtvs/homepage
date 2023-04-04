@@ -6,7 +6,7 @@ import countries from "./images/country.png";
 const Projects = () => {
   const phonebookData = {
     title: "Phonebook",
-    text: "Webapp used to store and modify records, using a self hosted API, React and mongoDB",
+    text: "Webapp used to store and modify records, using a self hosted API and mongoDB",
     href: "https://phonebook.tusharreddy.com",
     img: phonebook,
   };
