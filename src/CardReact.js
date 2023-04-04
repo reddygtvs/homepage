@@ -2,19 +2,16 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import phonebook from "./images/phonebook.png";
 
-const CardReact = () => {
+const CardReact = ({ title, text, href }) => {
   return (
     <Card border="secondary" style={{ width: "18rem" }}>
       <Card.Img variant="top" src={phonebook} />
       <Card.Body>
-        <Card.Title>Phonebook</Card.Title>
-        <Card.Text>
-          PhoneBook webapp used to store and modify records, using a self
-          created api, react and mongoDB.
-        </Card.Text>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{text}</Card.Text>
         <Button
           variant="primary"
-          href="https://phonebook.tusharreddy.com"
+          href="href"
           target="_blank"
           rel="noopener noreferrer"
         >
