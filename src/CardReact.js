@@ -1,11 +1,10 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import phonebook from "./images/phonebook.png";
 
-const CardReact = ({ title, text, href }) => {
+const CardReact = ({ title, text, href, img }) => {
   return (
     <Card border="secondary" style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={phonebook} />
+      <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>
