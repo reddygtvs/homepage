@@ -11,7 +11,7 @@ const CardReact = ({ title, text, href }) => {
         <Card.Text>{text}</Card.Text>
         <Button
           variant="primary"
-          href="href"
+          href={href}
           target="_blank"
           rel="noopener noreferrer"
         >
