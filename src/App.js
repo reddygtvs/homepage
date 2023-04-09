@@ -1,8 +1,5 @@
 import "./App.css";
 import pdf from "./pdf/tushar-resume.pdf";
-import bootstrap from "bootstrap";
-import BasicExample from "./BasicExample";
-import Button from "react-bootstrap/Button";
 
 const App = () => {
   return (
@@ -10,7 +7,7 @@ const App = () => {
       <div id="control" className="App">
         <div className="horizon">
           <h1>
-            Hi, I'm Tushar <span class="dot">:)</span>
+            Hi, I'm Tushar <span className="dot">:)</span>
           </h1>
         </div>
         <div>

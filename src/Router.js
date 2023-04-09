@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import App from "./App";
 import Projects from "./Projects";
-import BasicExample from "./BasicExample";
+import NavbarMain from "./NavbarMain";
 const Router = () => {
   return (
     <div className="App">
       <div id="navbar">
-        <BasicExample />
+        <NavbarMain />
       </div>
       <Routes>
         <Route path="/" element={<App />} />
