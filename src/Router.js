@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import App from "./App";
 import Projects from "./Projects";
-import NavbarMain from "./NavbarMain";
 import NavbarStock from "./NavbarStock";
 const Router = () => {
   return (
