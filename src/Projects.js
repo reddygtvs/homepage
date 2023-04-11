@@ -18,7 +18,7 @@ const Projects = () => {
   };
   return (
     <div id="control" className="App">
-      <div className="Horizon">
+      <div className="horizon">
         <CardReact {...phonebookData} />
         <CardReact {...countryData} />
       </div>

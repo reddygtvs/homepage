@@ -10,12 +10,9 @@ html {
 }
 
 #control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
   min-height: 80vh;
+  justify-content: center;
+  text-align: center;
 }
 
 img {
