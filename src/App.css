@@ -66,6 +66,16 @@ a:hover {
   place-items: center;
 }
 
+#basic {
+  padding: 2rem;
+  color: black;
+  text-decoration: none;
+  font-size: 2vh;
+}
+#basic:hover {
+  color: blue;
+}
+
 @keyframes bounce {
   0% {
     transform: scale(1, 1) translateY(0);
