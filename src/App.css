@@ -56,6 +56,10 @@ a:hover {
   display: grid;
   place-items: center;
 }
+.bottom {
+  display: grid;
+  place-items: center;
+}
 
 #basic {
   padding: 1.5rem;
@@ -63,6 +67,11 @@ a:hover {
   text-decoration: none;
   font-size: 2vh;
   background-color: aquamarine;
+}
+
+#footer {
+  padding: 1.5rem;
+  font-size: 2vh;
 }
 #basic:hover {
   color: blue;
