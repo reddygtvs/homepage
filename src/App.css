@@ -72,6 +72,8 @@ a:hover {
 #footer {
   padding: 1.5rem;
   font-size: 2vh;
+  text-decoration: none;
+  color: black;
 }
 #basic:hover {
   color: blue;

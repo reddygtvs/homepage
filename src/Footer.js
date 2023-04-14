@@ -1,7 +1,9 @@
 const Footer = () => {
   return (
     <footer className="bottom">
-      <p id="footer">@Home | 2022 - 2023</p>
+      <a id="footer" href="https://github.com/reddygtvs/homepage">
+        @Source | 2022 - 2023
+      </a>
     </footer>
   );
 };
