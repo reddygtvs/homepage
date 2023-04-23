@@ -75,6 +75,10 @@ a:hover {
   text-decoration: none;
   color: black;
 }
+#footer:hover {
+  color: magenta;
+}
+
 #basic:hover {
   color: blue;
 }

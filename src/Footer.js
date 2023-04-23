@@ -7,7 +7,7 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        @Source | 2022 - 2023
+        $Source | 2023 - 2024
       </a>
     </footer>
   );
