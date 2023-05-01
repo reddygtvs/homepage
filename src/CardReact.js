@@ -9,6 +9,7 @@ const CardReact = ({ title, text, href, img }) => {
         <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>
         <Button
+          id="button"
           variant="primary"
           href={href}
           target="_blank"

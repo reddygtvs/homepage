@@ -4,7 +4,7 @@ import pdf from "./pdf/tushar-resume.pdf";
 const App = () => {
   return (
     <div id="control" className="App">
-      <div className="horizon">
+      <div>
         <h1>
           Hi, I'm Tushar <span className="dot">:)</span>
         </h1>
