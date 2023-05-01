@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="Footer">
       <a
         id="footer"
         href="https://github.com/reddygtvs/homepage"
