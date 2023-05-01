@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const Router = () => {
   return (
-    <>
+    <div className="Pancake">
       <NavbarStock />
       <div className="App">
         <Routes>
@@ -15,7 +15,7 @@ const Router = () => {
         </Routes>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
