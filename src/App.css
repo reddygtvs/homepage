@@ -6,7 +6,6 @@ html {
 }
 * {
   /*background-color: #faf9f6;*/
-  background-color: #ffffff;
 }
 #button {
   transition: transform 0.5s ease;
@@ -57,7 +56,7 @@ h3 {
 }
 a:hover {
   transform: translateY(-3px);
-  color: darkblue;
+  color: rgb(6, 6, 236);
 }
 
 .App {
@@ -70,6 +69,7 @@ a:hover {
   justify-content: center;
   place-items: center;
   /*background: #5733ff;*/
+  background: #8bd3dd;
 }
 #basic {
   padding: 1.5rem;
@@ -84,6 +84,7 @@ a:hover {
   font-size: 2vh;
   text-decoration: none;
   color: black;
+  background: #8bd3dd;
 }
 #footer:hover {
   color: magenta;
