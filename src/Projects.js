@@ -2,6 +2,7 @@ import React from "react";
 import CardReact from "./CardReact";
 import phonebook from "./images/phonebook.png";
 import countries from "./images/country.png";
+import gym from "./images/gym.png";
 
 const Projects = () => {
   const phonebookData = {
@@ -16,11 +17,18 @@ const Projects = () => {
     href: "https://countries.tusharreddy.com",
     img: countries,
   };
+  const gymData = {
+    title: "GymRoutine",
+    text: "HTML/CSS/Javascript webapp which gives you the 5/3/1 workout routine",
+    href: "https://gym.tusharreddy.com",
+    img: gym,
+  };
   return (
     <div id="control" className="App">
       <div className="horizon">
         <CardReact {...phonebookData} />
         <CardReact {...countryData} />
+        <CardReact {...gymData} />
       </div>
     </div>
   );

@@ -19,7 +19,6 @@ html {
   justify-content: center;
   place-items: center;
   width: 100vw;
-  /*make sure background color covers whole nav */
   background: aquamarine;
 }
 .Pancake {
