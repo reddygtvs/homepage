@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const CardReact = ({ title, text, href, img }) => {
@@ -14,8 +13,9 @@ const CardReact = ({ title, text, href, img }) => {
     >
       <Card.Img variant="top" src={img} />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{text}</Card.Text>
+        <Card.Title style={{ color: "purple" }}>{title}</Card.Title>
+
+        <Card.Text style={{ textAlign: "center" }}>{text}</Card.Text>
       </Card.Body>
     </Card>
   );

@@ -20,13 +20,13 @@ const Projects = () => {
   };
   const gymData = {
     title: "GymRoutine",
-    text: "HTML/CSS/Javascript webapp which gives you the 5/3/1 workout routine",
+    text: "HTML/CSS/JS app which gives you a personalized 5/3/1 workout routine",
     href: "https://gym.tusharreddy.com",
     img: gym,
   };
   const haemoData = {
     title: "ImageClassifier",
-    text: "Used Tensorflow, Keras & Numpy to classify cattle haemoprotozoan diseases",
+    text: "Used Tensorflow, Keras & Numpy to identify cattle haemoprotozoan diseases",
     href: "https://reddygtvs-streamlit-haemo-application-7abpim.streamlit.app/",
     img: haemo,
   };
