@@ -3,6 +3,7 @@ import CardReact from "./CardReact";
 import phonebook from "./images/phonebook.png";
 import countries from "./images/country.png";
 import gym from "./images/gym.png";
+import haemo from "./images/haemo.png";
 
 const Projects = () => {
   const phonebookData = {
@@ -23,12 +24,20 @@ const Projects = () => {
     href: "https://gym.tusharreddy.com",
     img: gym,
   };
+  const haemoData = {
+    title: "ImageClassifier",
+    text: "Used Tensorflow, Keras & Numpy to classify cattle haemoprotozoan diseases",
+    href: "https://reddygtvs-streamlit-haemo-application-7abpim.streamlit.app/",
+    img: haemo,
+  };
+
   return (
     <div id="control" className="App">
       <div className="horizon">
         <CardReact {...phonebookData} />
         <CardReact {...countryData} />
         <CardReact {...gymData} />
+        <CardReact {...haemoData} />
       </div>
     </div>
   );
