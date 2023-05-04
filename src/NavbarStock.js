@@ -2,10 +2,10 @@ import "./App.css";
 const NavbarStock = () => {
   return (
     <header className="nav">
-      <a href="/" id="basic">
+      <a href="/" id="header">
         Home
       </a>
-      <a href="/projects" id="basic">
+      <a href="/projects" id="header">
         Projects
       </a>
     </header>
