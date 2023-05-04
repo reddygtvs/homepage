@@ -1,5 +1,5 @@
 import "./App.css";
-import pdf from "./pdf/tushar-resume.pdf";
+import Tags from "./Tags";
 
 const App = () => {
   return (
@@ -10,44 +10,7 @@ const App = () => {
         </h1>
 
         <h3>React | Node.js | Express | MongoDB | Cloudflare</h3>
-
-        <div>
-          <a
-            className="App-link"
-            href="https://github.com/reddygtvs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ./Github
-          </a>
-
-          <a
-            className="App-link"
-            href="https://www.linkedin.com/in/g-tushar-reddy-551018207/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @LinkedIn
-          </a>
-
-          <a
-            className="App-link"
-            href={pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
-
-          <a
-            className="App-link"
-            href="mailto:reddygtvs@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contact Me
-          </a>
-        </div>
+        <Tags />
       </div>
     </div>
   );
