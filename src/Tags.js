@@ -6,7 +6,7 @@ const Tags = () => {
     name: "./Github",
   };
   const linkedin = {
-    href: "https://www.linkedin.com/in/g-tushar-reddy-551018207/",
+    href: "https://www.linkedin.com/in/tushar-reddy/",
     name: "@LinkedIn",
   };
   const resume = {
