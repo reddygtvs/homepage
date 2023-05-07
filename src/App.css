@@ -169,5 +169,22 @@ a:hover {
 }
 
 #name {
-  font-weight: 600;
+  /*make font have a gradient*/
+
+  background: -webkit-linear-gradient(
+    -45deg,
+    #ffa63d,
+    #ff3d77,
+    #b933f9,
+    #5f19dd
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5vh;
+  padding-top: 6vh;
+  letter-spacing: -0.1rem;
+}
+#links {
+  padding-bottom: 6vh;
 }

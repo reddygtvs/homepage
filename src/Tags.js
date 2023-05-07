@@ -19,7 +19,7 @@ const Tags = () => {
   };
 
   return (
-    <div>
+    <div id="links">
       <Link {...github} />
       <Link {...linkedin} />
       <Link {...resume} />
