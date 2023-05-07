@@ -14,13 +14,7 @@ html {
   /*justify-content: center;*/
   text-align: center;
 }
-.nav {
-  display: flex;
-  justify-content: center;
-  place-items: center;
-  width: 100vw;
-  background: aquamarine;
-}
+
 .Pancake {
   display: grid;
   height: 100vh;
@@ -64,7 +58,8 @@ h3 {
 }
 a:hover {
   /* transform: translateY(-3px); */
-  background: blueviolet;
+  background: #f22952;
+  /* background: blueviolet; */
   color: white;
   /* color: rgb(6, 6, 236); */
 }
@@ -97,12 +92,21 @@ a:hover {
   background: #efdcf9;
   /* background: #8bd3dd; */
 }
+.nav {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100vw;
+  /* background: aquamarine; */
+  background: #efdcf9;
+}
 #header {
   padding: 1.5rem;
   color: black;
   text-decoration: none;
   font-size: 2vh;
-  background: aquamarine;
+  /* background: aquamarine; */
+  background: #efdcf9;
   transition: transform 0.5s ease;
 }
 
@@ -202,4 +206,8 @@ a:hover {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#card {
+  /* background: #efdcf9; */
 }

@@ -6,10 +6,12 @@ const CardReact = ({ title, text, href, img }) => {
   };
   return (
     <Card
+      id="card"
       onClick={handleCardClick}
-      border="secondary"
+      /* make border color light-purple */
+      border="light"
       className="card"
-      style={{ width: "18rem" }}
+      style={{ width: "18rem", color: "purple" }}
     >
       <Card.Img variant="top" src={img} />
       <Card.Body>
