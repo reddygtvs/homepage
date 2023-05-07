@@ -5,7 +5,7 @@ html {
   display: grid;
 }
 * {
-  /*background-color: #faf9f6;*/
+  /*background-color: #efebe0;*/
 }
 #button {
   transition: transform 0.5s ease;
@@ -94,8 +94,8 @@ a:hover {
   width: 100vw;
   justify-content: center;
   place-items: center;
-  /*background: #5733ff;*/
-  background: #8bd3dd;
+  background: #efdcf9;
+  /* background: #8bd3dd; */
 }
 #header {
   padding: 1.5rem;
@@ -111,7 +111,9 @@ a:hover {
   font-size: 2vh;
   text-decoration: none;
   color: black;
-  background: #8bd3dd;
+  background: #efdcf9;
+  /* background: #8bd3dd; */
+
   transition: transform 0.5s ease;
 }
 #footer:hover {
@@ -156,4 +158,16 @@ a:hover {
   animation-duration: 2s;
 
   animation-iteration-count: 2;
+}
+
+.App-link {
+  text-underline-offset: 4px;
+
+  padding-bottom: 1px;
+  /* color: #c55ffc; */
+  color: blueviolet;
+}
+
+#name {
+  font-weight: 600;
 }

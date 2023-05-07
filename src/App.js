@@ -5,11 +5,15 @@ const App = () => {
   return (
     <div id="control" className="App">
       <div>
-        <h1>
+        {/* make "Hi, I'm tushar in red color" */}
+
+        <h1 id="name">
           Hi, I'm Tushar <span className="dot">:)</span>
         </h1>
 
-        <h3>React | Node.js | Express | MongoDB | Cloudflare</h3>
+        <h3 style={{ color: "#f22952" }}>
+          React | Node.js | Express | MongoDB | Cloudflare
+        </h3>
         <Tags />
       </div>
     </div>
