@@ -188,3 +188,18 @@ a:hover {
 #links {
   padding-bottom: 6vh;
 }
+
+#skills {
+  background: -webkit-linear-gradient(-45deg, #ff3d77, #b933f9, #5a03fc);
+  font-size: 2.1vh;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#cardTitle {
+  background: -webkit-linear-gradient(-45deg, #ff3d77, #b933f9, #5a03fc);
+  font-size: 2.8vh;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

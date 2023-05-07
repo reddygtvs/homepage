@@ -13,7 +13,9 @@ const CardReact = ({ title, text, href, img }) => {
     >
       <Card.Img variant="top" src={img} />
       <Card.Body>
-        <Card.Title style={{ color: "purple" }}>{title}</Card.Title>
+        <Card.Title id="cardTitle" style={{ color: "purple" }}>
+          {title}
+        </Card.Title>
 
         <Card.Text style={{ textAlign: "center" }}>{text}</Card.Text>
       </Card.Body>
