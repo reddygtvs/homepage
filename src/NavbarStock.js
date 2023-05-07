@@ -1,13 +1,15 @@
 import "./App.css";
+import { Link } from "react-router-dom";
+
 const NavbarStock = () => {
   return (
     <header className="nav">
-      <a href="/" id="header">
+      <Link to="/" id="header">
         Home
-      </a>
-      <a href="/projects" id="header">
+      </Link>
+      <Link to="/projects" id="header">
         Projects
-      </a>
+      </Link>
     </header>
   );
 };
