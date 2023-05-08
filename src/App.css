@@ -4,14 +4,13 @@ html {
   font-family: "Montserrat", sans-serif;
   display: grid;
 }
-* {
-  /*background-color: #efebe0;*/
-}
+/* * {
+  background-color: #efebe0;
+} */
 #button {
   transition: transform 0.5s ease;
 }
 #control {
-  /*justify-content: center;*/
   text-align: center;
 }
 
@@ -57,11 +56,8 @@ h3 {
   margin-right: 5vw;
 }
 a:hover {
-  /* transform: translateY(-3px); */
   background: #f22952;
-  /* background: blueviolet; */
   color: white;
-  /* color: rgb(6, 6, 236); */
 }
 
 .card {
@@ -76,7 +72,7 @@ a:hover {
   cursor: pointer;
 }
 .card:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
@@ -90,14 +86,12 @@ a:hover {
   justify-content: center;
   place-items: center;
   background: #efdcf9;
-  /* background: #8bd3dd; */
 }
-.nav {
+.Header {
   display: flex;
   justify-content: center;
   place-items: center;
   width: 100vw;
-  /* background: aquamarine; */
   background: #efdcf9;
 }
 #header {
@@ -105,7 +99,6 @@ a:hover {
   color: black;
   text-decoration: none;
   font-size: 2vh;
-  /* background: aquamarine; */
   background: #efdcf9;
   transition: transform 0.5s ease;
 }
@@ -116,8 +109,6 @@ a:hover {
   text-decoration: none;
   color: black;
   background: #efdcf9;
-  /* background: #8bd3dd; */
-
   transition: transform 0.5s ease;
 }
 #footer:hover {
@@ -173,8 +164,6 @@ a:hover {
 }
 
 #name {
-  /*make font have a gradient*/
-
   background: -webkit-linear-gradient(
     -45deg,
     #ffa63d,
@@ -206,8 +195,4 @@ a:hover {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-#card {
-  /* background: #efdcf9; */
 }

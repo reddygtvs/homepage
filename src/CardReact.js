@@ -8,7 +8,6 @@ const CardReact = ({ title, text, href, img }) => {
     <Card
       id="card"
       onClick={handleCardClick}
-      /* make border color light-purple */
       border="light"
       className="card"
       style={{ width: "18rem", color: "purple" }}

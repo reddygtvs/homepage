@@ -5,8 +5,6 @@ const App = () => {
   return (
     <div id="control" className="App">
       <div>
-        {/* make "Hi, I'm tushar in red color" */}
-
         <h1 id="name">
           Hi, I'm Tushar <span className="dot">:)</span>
         </h1>
