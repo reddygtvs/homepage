@@ -1,5 +1,5 @@
 import Link from "./Link";
-import pdf from "./pdf/tushar-resume.pdf";
+import pdf from "../pdf/tushar-resume.pdf";
 const Tags = () => {
   const github = {
     href: "https://github.com/reddygtvs",

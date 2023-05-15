@@ -1,9 +1,9 @@
 import React from "react";
 import CardReact from "./CardReact";
-import phonebook from "./images/phonebook.png";
-import countries from "./images/country.png";
-import gym from "./images/gym.png";
-import haemo from "./images/haemo.png";
+import phonebook from "../images/phonebook.png";
+import countries from "../images/country.png";
+import gym from "../images/gym.png";
+import haemo from "../images/haemo.png";
 
 const Projects = () => {
   const phonebookData = {
