@@ -1,7 +1,7 @@
 import "../App.css";
 import { Link } from "react-router-dom";
 
-const NavbarStock = () => {
+const Header = () => {
   return (
     <header className="Header">
       <Link to="/" id="header">
@@ -14,4 +14,4 @@ const NavbarStock = () => {
   );
 };
 
-export default NavbarStock;
+export default Header;
