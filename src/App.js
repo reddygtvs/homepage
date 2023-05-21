@@ -9,9 +9,9 @@ const App = () => {
           Hi, I'm Tushar <span className="dot">:)</span>
         </h1>
 
-        <h3 id="skills" style={{ color: "#f22952" }}>
+        <h4 id="skills" style={{ color: "#f22952" }}>
           React | Node.js | Express | MongoDB | Cloudflare
-        </h3>
+        </h4>
         <Tags />
       </div>
     </div>
