@@ -157,15 +157,19 @@ a:hover {
   }
 }
 
-.dot {
+#dot {
   color: var(--red);
   display: inline-flex;
+  -webkit-animation-name: bounce;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 2;
   animation-name: bounce;
   animation-timing-function: ease;
   animation-duration: 2s;
-  color: #5a03fc;
-
   animation-iteration-count: 2;
+  -webkit-text-fill-color: #b933f9;
+  color: #5a03fc;
 }
 
 .App-link {
@@ -176,7 +180,7 @@ a:hover {
   color: blueviolet;
 }
 
-#name {
+.name {
   background: -webkit-linear-gradient(
     -45deg,
     #ffa63d,

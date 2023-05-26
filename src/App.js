@@ -5,8 +5,8 @@ const App = () => {
   return (
     <div id="control" className="App">
       <div>
-        <h1 id="name">
-          Hi, I'm Tushar <span className="dot">:)</span>
+        <h1 className="name">
+          Hi, I'm Tushar <span id="dot">:)</span>
         </h1>
 
         <h4 id="skills" style={{ color: "#f22952" }}>
