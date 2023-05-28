@@ -7,6 +7,13 @@ html {
 /* * {
   background-color: #efebe0;
 } */
+#firstLoad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 #button {
   transition: transform 0.5s ease;
 }
@@ -14,6 +21,11 @@ html {
   text-align: center;
 }
 
+#pfp {
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
 .Pancake {
   display: grid;
   height: 100vh;
