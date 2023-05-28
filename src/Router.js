@@ -3,6 +3,7 @@ import App from "./App";
 import Projects from "./components/Projects";
 import NavbarStock from "./components/Header";
 import Footer from "./components/Footer";
+import Blog from "./components/Blog";
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </div>
       <Footer />
