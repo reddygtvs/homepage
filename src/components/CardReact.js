@@ -10,7 +10,7 @@ const CardReact = ({ title, text, href, img }) => {
       onClick={handleCardClick}
       border="light"
       className="card"
-      style={{ width: "18rem", color: "purple" }}
+      style={{ width: "18rem", color: "purple", backgroundColor: "#f2f2f2" }}
     >
       <Card.Img variant="top" src={img} />
       <Card.Body>
