@@ -176,7 +176,23 @@ img {
   text-underline-offset: 4px;
   padding-bottom: 1px;
   color: blueviolet;
+  position: relative;
+  margin-top: 15px;
+  animation: floatAnimation 3s ease-in-out infinite;
 }
+/* Floating animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .App-link:hover {
   background: #f22952;
   color: white;
