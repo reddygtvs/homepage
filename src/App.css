@@ -225,7 +225,7 @@ img {
 /* Card Title */
 #cardTitle {
   background: -webkit-linear-gradient(-45deg, #ff3d77, #b933f9, #5a03fc);
-  font-size: 2.8vh;
+  font-size: 1.5rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -281,6 +281,6 @@ body {
   }
 }
 
-p {
+/* p {
   color: black;
-}
+} */
