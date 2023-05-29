@@ -1,35 +1,42 @@
 @import "bootstrap/dist/css/bootstrap.css";
+
+/* General styles */
 body,
 html {
   font-family: "Montserrat", sans-serif;
   display: grid;
 }
-/* * {
-  background-color: #efebe0;
-} */
+
+/* First load */
 #firstLoad {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/* Button */
 #button {
   transition: transform 0.5s ease;
 }
+
+/* Control */
 #control {
   text-align: center;
 }
 
+/* Profile picture */
 #pfp {
   display: grid;
   place-items: center;
   align-items: center;
 }
+
 #image {
   animation: pulse 2s infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
 }
+
 @keyframes pulse {
   0% {
     border: 7px solid #ff3d77;
@@ -38,57 +45,32 @@ html {
     border: 7px solid #b933f9;
   }
   100% {
-    border: 7px solid#5f19dd;
+    border: 7px solid #5f19dd;
   }
 }
 
+/* Pancake class */
 .Pancake {
   display: grid;
   height: 100vh;
   grid-template-rows: auto 1fr auto;
   place-items: center;
 }
+
+/* Image */
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
+
+/* Card */
 .card {
   text-align: center;
   display: inline-flex;
   margin: 3vw;
   margin: 5vh;
-}
-
-a {
-  display: inline-flex;
-  margin-left: 1.5vw;
-  margin-right: 1.5vw;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  transition: transform 0.5s ease;
-  border-radius: 0.5vh;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  background: white;
-  background-size: contain;
-}
-
-h1 {
-  font-size: 4vh;
-}
-
-h4 {
-  font-size: 2vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-}
-a:hover {
-  background: #f22952;
-  color: white;
-}
-
-.card {
   border-radius: 10px;
   padding: 8px;
   background: #fff;
@@ -96,18 +78,21 @@ a:hover {
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-
   cursor: pointer;
 }
+
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
+/* App class */
 .App {
   display: grid;
   place-items: center;
 }
+
+/* Footer */
 .Footer {
   display: flex;
   width: 100vw;
@@ -115,6 +100,8 @@ a:hover {
   place-items: center;
   background: #efdcf9;
 }
+
+/* Header */
 .Header {
   display: flex;
   justify-content: center;
@@ -122,59 +109,29 @@ a:hover {
   width: 100vw;
   background: #efdcf9;
 }
-#home-link {
-  padding: 1.5rem;
-  color: black;
-  text-decoration: none;
-  font-size: 1.1rem;
-  background: #efdcf9;
-  transition: transform 0.5s ease;
-}
-#projects-link {
-  padding: 1.5rem;
-  color: black;
-  text-decoration: none;
-  font-size: 1.1rem;
-  background: #efdcf9;
-  transition: transform 0.5s ease;
-}
 
-#blog-link {
-  padding: 1.5rem;
-  color: black;
-  text-decoration: none;
-  font-size: 1.1rem;
-  background: #efdcf9;
-  transition: transform 0.5s ease;
-}
-
+/* Header and Footer links */
+#home-link,
+#projects-link,
+#blog-link,
 #footer {
   padding: 1.5rem;
-  font-size: 1.1rem;
-  text-decoration: none;
   color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
   background: #efdcf9;
   transition: transform 0.5s ease;
 }
-#home-link:hover {
-  color: magenta;
-  transform: translateY(-3px);
-}
 
-#projects-link:hover {
-  color: magenta;
-  transform: translateY(-3px);
-}
-
-#blog-link:hover {
-  color: magenta;
-  transform: translateY(-3px);
-}
+#home-link:hover,
+#projects-link:hover,
+#blog-link:hover,
 #footer:hover {
   color: magenta;
-  transform: translateY(-1.5px);
+  transform: translateY(-3px);
 }
 
+/* Bouncing dot animation */
 @keyframes bounce {
   0% {
     transform: scale(1, 1) translateY(0);
@@ -214,13 +171,14 @@ a:hover {
   color: #5a03fc;
 }
 
+/* App link */
 .App-link {
   text-underline-offset: 4px;
   padding-bottom: 1px;
-  /* color: #c55ffc; */
   color: blueviolet;
 }
 
+/* Name */
 .name {
   background: -webkit-linear-gradient(
     -45deg,
@@ -229,17 +187,14 @@ a:hover {
     #b933f9,
     #5f19dd
   );
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.75rem;
   padding-top: 3rem;
   letter-spacing: -0.1rem;
 }
-#links {
-  padding-bottom: 6vh;
-}
 
+/* Skills */
 #skills {
   background: -webkit-linear-gradient(-45deg, #ff3d77, #b933f9, #5a03fc);
   font-size: 1.17rem;
@@ -247,15 +202,39 @@ a:hover {
   -webkit-text-fill-color: transparent;
 }
 
+/* Card Title */
 #cardTitle {
   background: -webkit-linear-gradient(-45deg, #ff3d77, #b933f9, #5a03fc);
   font-size: 2.8vh;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Blog home */
 .Blog-home {
-  /* display: grid; */
   padding: 30px;
+}
+
+/* Links */
+#links {
+  padding-bottom: 6vh;
+}
+
+/* Hover effect on links */
+a {
+  display: inline-flex;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  transition: transform 0.5s ease;
+  border-radius: 0.5vh;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  background: white;
+  background-size: contain;
+}
+
+a:hover {
+  background: #f22952;
+  color: white;
 }
