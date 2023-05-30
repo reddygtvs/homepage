@@ -178,7 +178,8 @@ img {
 .App-link {
   text-underline-offset: 4px;
   padding-bottom: 1px;
-  color: blueviolet;
+  /* color: blueviolet; */
+  color: #0000ff;
   position: relative;
   margin-top: 15px;
   animation: floatAnimation 3s ease-in-out infinite;
