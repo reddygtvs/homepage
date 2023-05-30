@@ -40,12 +40,15 @@ html {
 @keyframes pulse {
   0% {
     border: 7px solid #ff3d77;
+    transform: scale(1, 1);
   }
   50% {
     border: 7px solid #b933f9;
+    transform: scale(1.0075, 1.0075);
   }
   100% {
     border: 7px solid #5f19dd;
+    transform: scale(1, 1);
   }
 }
 
