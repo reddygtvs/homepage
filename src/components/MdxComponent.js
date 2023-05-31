@@ -5,13 +5,11 @@ const MdxComponent = () => {
   const { filename } = useParams();
   const sampleBlogCheck = "sample-blog.mdx";
   return (
-    <div>
+    <div className="BlogIndi">
       <Link to="/blogs">
-        <h3>Back to Blogs</h3>
+        <h3>{"<<Back to Blogs"}</h3>
       </Link>
-      <div className="BlogIndi">
-        {sampleBlogCheck === filename && <Content />}
-      </div>
+      <div>{sampleBlogCheck === filename && <Content />}</div>
     </div>
   );
 };
