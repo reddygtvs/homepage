@@ -38,7 +38,7 @@ const Header = () => {
             : {}
         }
       >
-        Blog
+        Blogs
       </Link>
     </header>
   );
