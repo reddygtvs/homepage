@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import blogsData from "../blogs/blogs.json";
-import MdxComponent from "./MdxComponent";
 
 const Blog = () => {
   return (
