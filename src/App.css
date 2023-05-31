@@ -312,7 +312,7 @@ body {
   color: black;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 650px;
   min-width: none;
   padding: 30px;
   margin: 20px;
@@ -321,8 +321,8 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .BlogIndi {
-    padding: 15px;
-    max-width: 400px;
+    padding: 5px;
+    max-width: 300px;
   }
 }
 #BlogLink {
