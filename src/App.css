@@ -288,3 +288,7 @@ body {
 .Header a.active {
   text-decoration: underline;
 }
+
+#black {
+  color: black;
+}
