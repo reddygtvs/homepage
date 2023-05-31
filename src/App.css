@@ -292,3 +292,23 @@ body {
 #black {
   color: black;
 }
+#BlogClick {
+  color: black;
+  transition: transform 0.5s ease;
+}
+#BlogClick:hover {
+  color: magenta;
+  /* transform: scale(1.05); */
+}
+
+.BlogIndi {
+  color: black;
+  padding: 30px;
+}
+
+#BlogLink {
+  color: black;
+}
+ul {
+  color: black;
+}

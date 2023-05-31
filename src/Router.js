@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Blog from "./components/Blog";
+import MdxComponent from "./components/MdxComponent";
 
 const Router = () => {
   return (
@@ -13,7 +14,8 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blogs" element={<Blog />} />
+          <Route path="/blogs/:filename" element={<MdxComponent />} />
         </Routes>
       </div>
       <Footer />

@@ -30,9 +30,13 @@ const Header = () => {
         Projects
       </Link>
       <Link
-        to="/blog"
+        to="/blogs"
         id="blog-link"
-        style={location.pathname === "/blog" ? activeLinkStyle : {}}
+        style={
+          location.pathname !== "/projects" && location.pathname !== "/"
+            ? activeLinkStyle
+            : {}
+        }
       >
         Blog
       </Link>
