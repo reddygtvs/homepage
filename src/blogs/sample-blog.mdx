@@ -1,12 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-
-<SyntaxHighlighter language="javascript" style={a11yDark}>
-  {`import React from 'react';
-  function MyComponent() {
-    return <div>Hello, World!</div>;
-  }`}
-</SyntaxHighlighter>
+import { xonokai } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 # A demo of `react-markdown`
 
@@ -41,7 +34,7 @@ This section is replaced by an actual table of contents.
 Here is an example of a plugin to highlight code:
 [`rehype-highlight`](https://github.com/rehypejs/rehype-highlight).
 
-<SyntaxHighlighter language="javascript" style={a11yDark}>
+<SyntaxHighlighter language="javascript" style={xonokai}>
 {`import React from "react";
 import ReactDOM from "react-dom";
 import ReactMarkdown from "react-markdown";
@@ -99,7 +92,7 @@ You should probably combine it with
 
 You can pass components to change things:
 
-<SyntaxHighlighter language="javascript" style={a11yDark}>
+<SyntaxHighlighter language="javascript" style={xonokai}>
   {`import React from "react";
 import ReactDOM from "react-dom";
 import ReactMarkdown from "react-markdown";
