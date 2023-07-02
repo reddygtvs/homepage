@@ -251,24 +251,6 @@ img {
   padding-bottom: 6vh;
 }
 
-/* Hover effect on links */
-/* a {
-  display: inline-flex;
-  margin-left: 1.5vw;
-  margin-right: 1.5vw;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  transition: transform 0.5s ease;
-  border-radius: 0.5vh;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  background-size: contain;
-} */
-
-/* a:hover {
-  background: #f22952;
-  color: white;
-} */
-
 body {
   background: linear-gradient(-45deg, #ffedc1, #eaa6e4);
   background-size: 700% 700%;
