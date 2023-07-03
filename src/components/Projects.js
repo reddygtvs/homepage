@@ -27,7 +27,7 @@ const Projects = () => {
   const haemoData = {
     title: "ImageClassifier",
     text: "Used Tensorflow, Keras & Numpy to identify cattle haemoprotozoan diseases",
-    href: "https://reddygtvs-streamlit-haemo-application-7abpim.streamlit.app/",
+    href: "https://haemo-classification.streamlit.app/",
     img: haemo,
   };
 

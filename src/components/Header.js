@@ -6,7 +6,6 @@ const Header = () => {
 
   const activeLinkStyle = {
     textDecoration: "underline",
-    // textDecorationColor: "#f22952",
     textDecorationColor: "magenta",
     textUnderlineOffset: 6 + "px",
     textDecorationThickness: 4 + "px",
