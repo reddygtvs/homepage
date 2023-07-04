@@ -1,5 +1,14 @@
 import React, { lazy, Suspense } from "react";
 import { Link, useParams } from "react-router-dom";
+import Spinner from "./Spinner";
+
+const LazyIter = lazy(
+  () =>
+    // eslint-disable-next-line import/no-webpack-loader-syntax
+    import(
+      "!@mdx-js/loader!../blogs/animation-iteration-count-css-rabbithole.mdx"
+    )
+);
 
 const LazyContent = lazy(
   // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -9,6 +18,7 @@ const LazyContent = lazy(
 const MdxComponent: React.FC = () => {
   const { filename } = useParams<{ filename: string }>();
   const sampleBlogCheck = "sample-blog.mdx";
+  const animationBlogCheck = "animation-iteration-count-css-rabbithole.mdx";
   return (
     <div className="BlogIndi">
       <Link to="/blogs">
@@ -16,8 +26,15 @@ const MdxComponent: React.FC = () => {
       </Link>
       <div>
         {sampleBlogCheck === filename && (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <LazyContent />
+          </Suspense>
+        )}
+      </div>
+      <div>
+        {animationBlogCheck === filename && (
+          <Suspense fallback={<Spinner />}>
+            <LazyIter />
           </Suspense>
         )}
       </div>

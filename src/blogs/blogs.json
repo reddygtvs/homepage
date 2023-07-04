@@ -2,5 +2,9 @@
   {
     "title": "Sample blog to test out routes",
     "filename": "sample-blog.mdx"
+  },
+  {
+    "title:": "Animation iteration count",
+    "filename": "animation-iteration-count-css-rabbithole.mdx"
   }
 ]

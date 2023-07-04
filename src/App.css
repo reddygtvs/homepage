@@ -56,6 +56,7 @@ html {
 .Pancake {
   display: grid;
   height: 100vh;
+  /* width: 100vw; */
   grid-template-rows: auto 1fr auto;
   place-items: center;
 }
@@ -93,6 +94,7 @@ img {
 .App {
   display: grid;
   place-items: center;
+  width: 100vw;
 }
 
 /* Footer */
@@ -180,7 +182,6 @@ img {
 .App-link {
   text-underline-offset: 4px;
   padding-bottom: 1px;
-  /* color: blueviolet; */
   color: #0000ff;
   position: relative;
   margin-top: 15px;
@@ -279,7 +280,6 @@ body {
 /* Blog home */
 .BlogHome {
   padding: 30px;
-  /* align-items: flex-start; */
 }
 #black {
   color: black;
@@ -303,7 +303,7 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .BlogIndi {
-    padding: 5px;
+    padding: 1px;
     max-width: 300px;
   }
 }
@@ -312,4 +312,31 @@ body {
 }
 ul {
   color: black;
+}
+
+#center {
+  display: grid;
+  place-items: center;
+  margin: 10px;
+}
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 6px solid black;
+  border-radius: 50%;
+  border-top-color: blueviolet;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }

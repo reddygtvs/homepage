@@ -12,6 +12,10 @@ const blogsData: BlogData[] = [
     title: "Sample blog to test out routes",
     filename: "sample-blog.mdx",
   },
+  {
+    title: "animation-iteration-count: A CSS Rabbithole",
+    filename: "animation-iteration-count-css-rabbithole.mdx",
+  },
   // Add more blog entries here
 ];
 
