@@ -1,8 +1,10 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Link, useParams } from "react-router-dom";
 
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import Content from "!@mdx-js/loader!../blogs/sample-blog.mdx";
+const LazyContent = lazy(
+  // eslint-disable-next-line import/no-webpack-loader-syntax
+  () => import("!@mdx-js/loader!../blogs/sample-blog.mdx")
+);
 
 const MdxComponent: React.FC = () => {
   const { filename } = useParams<{ filename: string }>();
@@ -12,7 +14,13 @@ const MdxComponent: React.FC = () => {
       <Link to="/blogs">
         <h3>{"<<Back to Blogs"}</h3>
       </Link>
-      <div>{sampleBlogCheck === filename && <Content />}</div>
+      <div>
+        {sampleBlogCheck === filename && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyContent />
+          </Suspense>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
+import React from "react";
 declare module "*.mdx" {
-  const content: string;
+  const content: React.ComponentType<any>;
   export default content;
 }

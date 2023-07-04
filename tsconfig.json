@@ -6,7 +6,7 @@
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "node",
-    "types": ["react-syntax-highlighter"],
+    "types": ["react-syntax-highlighter", "mdx"],
     "resolveJsonModule": true,
     "allowJs": false,
     "noEmit": true,
