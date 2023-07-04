@@ -175,6 +175,7 @@ img {
   animation-duration: 2s;
   animation-iteration-count: 2;
   -webkit-text-fill-color: #b933f9;
+  animation-delay: 1s;
   color: #5a03fc;
 }
 
@@ -253,7 +254,7 @@ img {
 }
 
 body {
-  background: linear-gradient(-45deg, #ffedc1, #eaa6e4);
+  background: linear-gradient(-45deg, #e8d6ff, #eaa6e4);
   background-size: 700% 700%;
   animation: gradient 15s ease infinite;
   height: 100vh;

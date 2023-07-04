@@ -19,7 +19,7 @@ const blogsData: BlogData[] = [
   // Add more blog entries here
 ];
 
-const Blog = () => {
+const Blog: React.FC = () => {
   return (
     <div className="BlogHome">
       <h1 className="name">Blogs</h1>
