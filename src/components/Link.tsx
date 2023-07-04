@@ -1,4 +1,11 @@
-const Link = ({ href, name }) => {
+import React from "react";
+
+interface LinkProps {
+  href: string;
+  name: string;
+}
+
+const Link: React.FC<LinkProps> = ({ href, name }) => {
   return (
     <a
       className="App-link"

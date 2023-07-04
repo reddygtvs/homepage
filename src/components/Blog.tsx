@@ -1,6 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import blogsData from "../blogs/blogs.json";
+// import blogsData from "../blogs/blogs.json";
+
+interface BlogData {
+  title: string;
+  filename: string;
+}
+
+const blogsData: BlogData[] = [
+  {
+    title: "Sample blog to test out routes",
+    filename: "sample-blog.mdx",
+  },
+  // Add more blog entries here
+];
 
 const Blog = () => {
   return (

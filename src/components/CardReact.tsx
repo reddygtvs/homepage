@@ -1,9 +1,18 @@
+import React from "react";
 import Card from "react-bootstrap/Card";
 
-const CardReact = ({ title, text, href, img }) => {
+interface CardReactProps {
+  title: string;
+  text: string;
+  href: string;
+  img: string;
+}
+
+const CardReact: React.FC<CardReactProps> = ({ title, text, href, img }) => {
   const handleCardClick = () => {
     window.open(href, "_blank");
   };
+
   return (
     <Card
       id="card"
@@ -17,7 +26,6 @@ const CardReact = ({ title, text, href, img }) => {
         <Card.Title id="cardTitle" style={{ color: "purple" }}>
           {title}
         </Card.Title>
-
         <Card.Text style={{ textAlign: "center" }}>{text}</Card.Text>
       </Card.Body>
     </Card>

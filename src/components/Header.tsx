@@ -1,14 +1,14 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const Header = () => {
+const Header: React.FC = () => {
   const location = useLocation();
 
-  const activeLinkStyle = {
+  const activeLinkStyle: React.CSSProperties = {
     textDecoration: "underline",
     textDecorationColor: "magenta",
-    textUnderlineOffset: 6 + "px",
-    textDecorationThickness: 4 + "px",
+    textUnderlineOffset: "6px",
+    textDecorationThickness: "4px",
     color: "magenta",
   };
 

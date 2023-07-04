@@ -1,16 +1,17 @@
 import "./App.css";
+import React from "react";
 import Tags from "./components/Tags";
 import Image from "react-bootstrap/Image";
 import pfp from "./images/pfp.webp";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div id="firstLoad">
       <div id="pfp">
         <div>
           <Image
             id="image"
-            roundedCircle="true"
+            roundedCircle={true}
             src={pfp}
             alt="pfp"
             style={{ maxWidth: "250px", maxHeight: "250px" }}

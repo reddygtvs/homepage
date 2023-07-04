@@ -1,8 +1,11 @@
-/* eslint-disable import/no-webpack-loader-syntax */
-import Content from "!@mdx-js/loader!../blogs/sample-blog.mdx";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
-const MdxComponent = () => {
-  const { filename } = useParams();
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import Content from "!@mdx-js/loader!../blogs/sample-blog.mdx";
+
+const MdxComponent: React.FC = () => {
+  const { filename } = useParams<{ filename: string }>();
   const sampleBlogCheck = "sample-blog.mdx";
   return (
     <div className="BlogIndi">

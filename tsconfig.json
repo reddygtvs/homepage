@@ -1,0 +1,25 @@
+{
+  // "include": ["src/**/*", "package.json"],
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "types": ["react-syntax-highlighter"],
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "noEmit": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    // other exclusions
+    "**/*.mdx"
+  ]
+}

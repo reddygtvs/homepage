@@ -1,3 +1,4 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import App from "./App";
 import Projects from "./components/Projects";
@@ -6,7 +7,7 @@ import Footer from "./components/Footer";
 import Blog from "./components/Blog";
 import MdxComponent from "./components/MdxComponent";
 
-const Router = () => {
+const Router: React.FC = () => {
   return (
     <div className="Pancake">
       <Header />

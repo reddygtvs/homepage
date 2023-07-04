@@ -27,3 +27,30 @@ module.exports = {
     },
   },
 };
+
+// module.exports = {
+//   webpack: {
+//     alias: {
+//       "@src": path.resolve(__dirname, "src"),
+//     },
+//     configure: (webpackConfig, { env, paths }) => {
+//       webpackConfig.resolve.extensions.push(".ts", ".tsx");
+//       return webpackConfig;
+//     },
+//   },
+//   jest: {
+//     configure: {
+//       moduleNameMapper: {
+//         "^@src(.*)$": "<rootDir>/src$1",
+//       },
+//       transform: {
+//         "^.+\\.tsx?$": "ts-jest",
+//       },
+//       globals: {
+//         "ts-jest": {
+//           tsconfig: "<rootDir>/tsconfig.json",
+//         },
+//       },
+//     },
+//   },
+// };
