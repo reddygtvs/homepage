@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import App from "./App";
 import Spinner from "./components/Spinner";
+import NotFound from "./components/NotFound";
 
 const LazyProjects = React.lazy(() => import("./components/Projects"));
 const LazyBlog = React.lazy(() => import("./components/Blog"));
@@ -40,6 +41,7 @@ const Router: React.FC = () => {
               </Suspense>
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
