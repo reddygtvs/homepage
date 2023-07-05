@@ -6,8 +6,7 @@ import pfp from "./images/pfp.webp";
 
 const App: React.FC = () => {
   return (
-    /* bottom may not be necessary */
-    <div className="flex flex-col justify-center">
+    <div>
       <div className="grid place-items-center">
         <div>
           <Image
