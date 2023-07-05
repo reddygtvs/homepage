@@ -20,23 +20,25 @@ const MdxComponent: React.FC = () => {
   const sampleBlogCheck = "sample-blog.mdx";
   const animationBlogCheck = "animation-iteration-count-css-rabbithole.mdx";
   return (
-    <div className="BlogIndi">
+    <div className="text-black flex flex-col max-w-[650px] p-30 m-20 font-sans p-3">
       <Link to="/blogs">
         <h3>{"<<Back to Blogs"}</h3>
       </Link>
-      <div>
-        {sampleBlogCheck === filename && (
-          <Suspense fallback={<Spinner />}>
-            <LazyContent />
-          </Suspense>
-        )}
-      </div>
-      <div>
-        {animationBlogCheck === filename && (
-          <Suspense fallback={<Spinner />}>
-            <LazyIter />
-          </Suspense>
-        )}
+      <div className="max-[640px]:max-w-[320px]">
+        <div>
+          {sampleBlogCheck === filename && (
+            <Suspense fallback={<Spinner />}>
+              <LazyContent />
+            </Suspense>
+          )}
+        </div>
+        <div>
+          {animationBlogCheck === filename && (
+            <Suspense fallback={<Spinner />}>
+              <LazyIter />
+            </Suspense>
+          )}
+        </div>
       </div>
     </div>
   );

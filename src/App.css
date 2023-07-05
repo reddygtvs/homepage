@@ -181,22 +181,11 @@ img {
 
 /* App link */
 .App-link {
-  text-underline-offset: 4px;
-  padding-bottom: 1px;
   color: #0000ff;
-  position: relative;
-  margin-top: 15px;
   animation: floatAnimation 3s ease-in-out infinite;
-  display: inline-flex;
-  margin-left: 1.5vw;
-  margin-right: 1.5vw;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
   transition: transform 0.5s ease;
-  border-radius: 0.5vh;
   transition: color 0.3s ease, background-color 0.3s ease;
-  /* background: white; */
-  background-size: contain;
+  /* background-size: contain; */
 }
 /* Floating animation */
 @keyframes floatAnimation {
@@ -234,7 +223,13 @@ img {
 
 /* Skills */
 #skills {
-  background: -webkit-linear-gradient(-45deg, #ff3d77, #b933f9, #5a03fc);
+  background: -webkit-linear-gradient(
+    -45deg,
+
+    #ff3d77,
+    #b933f9,
+    #5f19dd /* #5a03fc */
+  );
   font-size: 1.17rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

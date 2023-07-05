@@ -21,15 +21,13 @@ const blogsData: BlogData[] = [
 
 const Blog: React.FC = () => {
   return (
-    <div className="BlogHome">
+    <div className="p-30">
       <h1 className="name">Blogs</h1>
       <ul>
         {blogsData.map((blog) => (
-          <li className="BlogLink" key={blog.filename}>
+          <li className="text-black" key={blog.filename}>
             <Link to={`/blogs/${blog.filename}`}>
-              <h2 id="BlogClick" className="App-link">
-                {blog.title}
-              </h2>
+              <h2 className="App-link">{blog.title}</h2>
             </Link>
           </li>
         ))}

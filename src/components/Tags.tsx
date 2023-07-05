@@ -26,7 +26,7 @@ const Tags: React.FC = () => {
   };
 
   return (
-    <div id="links">
+    <div className="pb-[6vh] underline">
       <Link {...github} />
       <Link {...linkedin} />
       <Link {...resume} />

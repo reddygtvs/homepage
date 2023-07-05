@@ -12,7 +12,7 @@ const NotFound: React.FC = () => {
     name: "Head back Home",
   };
   return (
-    <div id="center">
+    <div className="grid place-items-center m-[10px]">
       <h1 className="name">
         404 not Found <span id="dot">:(</span>
       </h1>

@@ -39,8 +39,8 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div id="control" className="App">
-      <div className="horizon">
+    <div className="grid place-items-center w-[100vw]">
+      <div>
         <CardReact {...phonebookData} />
         <CardReact {...countryData} />
         <CardReact {...gymData} />
