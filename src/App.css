@@ -156,7 +156,7 @@ body {
   background-size: 700% 700%;
   animation: gradient 10s ease infinite;
   height: 100vh;
-  color: white;
+  color: black;
 }
 
 @keyframes gradient {
