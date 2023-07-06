@@ -25,7 +25,7 @@ const MdxComponent: React.FC = () => {
       <Link to="/blogs">
         <h3 className="my-3 text-xl">{"<<Back to Blogs"}</h3>
       </Link>
-      <div className="max-[580px]:max-w-[415px] w-[600px]">
+      <div className="max-[580px]:max-w-[360px] w-[600px]">
         <div>
           {sampleBlogCheck === filename && (
             <Suspense fallback={<Spinner />}>
