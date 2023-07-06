@@ -156,9 +156,10 @@ img {
 }
 
 body {
-  background: linear-gradient(-45deg, #dcaaff, #eaa6e4);
+  background: linear-gradient(-45deg, #e9ffe9, #e9dbff, #f4e5f7);
   background-size: 1000% 1000%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 6s ease infinite;
+  background-color: black;
   height: 100vh;
   color: black;
 }
@@ -170,7 +171,7 @@ body {
   }
   50% {
     background-position: 100% 50%;
-    color: #ffffff;
+    color: black;
   }
   100% {
     background-position: 0% 50%;
