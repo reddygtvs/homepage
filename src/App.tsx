@@ -1,4 +1,3 @@
-import "./App.css";
 import React from "react";
 import Tags from "./components/Tags";
 import Image from "react-bootstrap/Image";

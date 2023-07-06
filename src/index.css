@@ -1,3 +1,201 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "bootstrap/dist/css/bootstrap.css";
+
+/* General styles */
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+}
+
+#image {
+  animation: pulse 2s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    border: 7px solid #ff3d77;
+    transform: scale(1, 1);
+  }
+  50% {
+    border: 7px solid #b933f9;
+    transform: scale(1.0075, 1.0075);
+  }
+  100% {
+    border: 7px solid #5f19dd;
+    transform: scale(1, 1);
+  }
+}
+
+/* Image */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Card */
+.card {
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Bouncing dot animation */
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-50px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+#dot {
+  color: var(--red);
+  display: inline-flex;
+  -webkit-animation-name: bounce;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 2;
+  animation-name: bounce;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  -webkit-text-fill-color: #b933f9;
+  animation-delay: 1s;
+  color: #5a03fc;
+}
+
+/* App link */
+.App-link {
+  color: #0000ff;
+  animation: floatAnimation 3s ease-in-out infinite;
+  transition: transform 0.5s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  /* background-size: contain; */
+}
+.App-link:hover {
+  background: #f22952;
+  color: white;
+}
+/* Floating animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Name */
+.name {
+  background: -webkit-linear-gradient(
+    -45deg,
+    #ffa63d,
+    #ff3d77,
+    #b933f9,
+    #5f19dd
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.75rem;
+  padding-top: 3rem;
+  letter-spacing: -0.1rem;
+}
+
+/* Skills */
+#skills {
+  background: -webkit-linear-gradient(
+    -45deg,
+
+    #ff3d77,
+    #b933f9,
+    #5f19dd /* #5a03fc */
+  );
+  font-size: 1.17rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card Title */
+#cardTitle {
+  background: -webkit-linear-gradient(-45deg, #ff3d77, #b933f9, #5a03fc);
+  font-size: 1.5rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  background: linear-gradient(-45deg, #dcaaff, #eaa6e4);
+  background-size: 1000% 1000%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  color: black;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+    color: #000000;
+  }
+  50% {
+    background-position: 100% 50%;
+    color: #ffffff;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.Header a.active {
+  text-decoration: underline;
+}
+/* Blog home */
+
+.loading {
+  border: 6px solid black;
+  border-top-color: blueviolet;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
