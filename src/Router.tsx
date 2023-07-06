@@ -15,7 +15,7 @@ const Router: React.FC = () => {
     <div className="grid h-screen grid-rows-[auto_1fr_auto] place-items-center">
       <Header />
       {/* the bottom may not be necessary??? */}
-      <div className="grid place-items-center w-full">
+      <div>
         <Routes>
           <Route path="/" element={<App />} />
           <Route

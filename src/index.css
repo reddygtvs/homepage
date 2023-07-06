@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "bootstrap/dist/css/bootstrap.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 /* General styles */
 body,
