@@ -13,6 +13,7 @@ const App: React.FC = () => {
             roundedCircle={true}
             src={pfp}
             alt="pfp"
+            loading="lazy"
             style={{ maxWidth: "250px", maxHeight: "250px" }}
           />
         </div>
