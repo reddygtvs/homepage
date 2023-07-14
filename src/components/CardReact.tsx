@@ -20,7 +20,7 @@ const CardReact: React.FC<CardReactProps> = ({ title, text, href, img }) => {
       className="card inline-flex text-center rounded-[10px] mx-[3vw] my-[5vh] p-[8px] bg-[#FFF] cursor-pointer shadow-md hover:shadow-2xl"
       style={{ width: "18rem", color: "purple", backgroundColor: "#f2f2f2" }}
     >
-      <Card.Img variant="top" src={img} loading="lazy" />
+      <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title id="cardTitle" style={{ color: "purple" }}>
           {title}
