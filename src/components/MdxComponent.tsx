@@ -20,7 +20,6 @@ const MdxComponent: React.FC = () => {
   const sampleBlogCheck = "sample-blog.mdx";
   const animationBlogCheck = "animation-iteration-count-css-rabbithole.mdx";
   return (
-    // <div className="text-black flex flex-col max-w-[650px] p-30 m-20 font-sans p-3">
     <div className="text-black">
       <Link to="/blogs">
         <h3 className="my-3 text-xl">{"<<Back to Blogs"}</h3>

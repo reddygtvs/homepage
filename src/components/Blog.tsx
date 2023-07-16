@@ -16,7 +16,6 @@ const blogsData: BlogData[] = [
     title: "animation-iteration-count: A CSS Rabbithole",
     filename: "animation-iteration-count-css-rabbithole.mdx",
   },
-  // Add more blog entries here
 ];
 
 const Blog: React.FC = () => {
