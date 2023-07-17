@@ -5,6 +5,7 @@
   "types": "src/index.d.ts",
   "type": "module",
   "dependencies": {
+    "@mdx-js/react": "^2.3.0",
     "@mdx-js/rollup": "^2.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -53,7 +54,6 @@
     }
   },
   "devDependencies": {
-    "@mdx-js/react": "^1.6.22",
     "@tailwindcss/typography": "^0.5.9",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.14",
