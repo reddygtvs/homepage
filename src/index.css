@@ -93,16 +93,11 @@ img {
 
 /* App link */
 .App-link {
-  color: #0000ff;
   animation: floatAnimation 3s ease-in-out infinite;
   transition: transform 0.5s ease;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  /* background-size: contain; */
+  transition: background-color 0.3s ease;
 }
-.App-link:hover {
-  background: #f22952;
-  color: white;
-}
+
 /* Floating animation */
 @keyframes floatAnimation {
   0% {
