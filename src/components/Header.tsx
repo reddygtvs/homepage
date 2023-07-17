@@ -16,21 +16,21 @@ const Header: React.FC = () => {
     <header className="flex justify-center place-items-center w-screen">
       <Link
         to="/"
-        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-[1.1rem] hover:-translate-y-1 transition transform duration-500 ease"
+        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-lg hover:-translate-y-1 transition transform duration-500 ease"
         style={location.pathname === "/" ? activeLinkStyle : {}}
       >
         Home
       </Link>
       <Link
         to="/projects"
-        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-[1.1rem] hover:-translate-y-1 transition transform duration-500 ease"
+        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-lg hover:-translate-y-1 transition transform duration-500 ease"
         style={location.pathname === "/projects" ? activeLinkStyle : {}}
       >
         Projects
       </Link>
       <Link
         to="/blogs"
-        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-[1.1rem] hover:-translate-y-1 transition transform duration-500 ease"
+        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-lg hover:-translate-y-1 transition transform duration-500 ease"
         style={
           location.pathname !== "/projects" && location.pathname !== "/"
             ? activeLinkStyle
