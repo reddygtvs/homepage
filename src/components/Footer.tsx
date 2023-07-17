@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Source | 2023 - 2024
+        $ource | 2023 - 2024
       </a>
     </footer>
   );

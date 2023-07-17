@@ -40,7 +40,7 @@ const Tags: React.FC = () => {
   };
 
   return (
-    <div className="pb-[6vh] underline">
+    <div className="pb-5 grid place-items-center flex-row sm:flex sm:flex-col">
       <Link {...github} />
       <Link {...linkedin} />
       <Link {...resume} />
