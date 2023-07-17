@@ -17,7 +17,7 @@ const NotFound: React.FC = () => {
     imageAlt: "404",
   };
   return (
-    <div className="grid place-items-center m-[10px]">
+    <div className="grid place-items-center">
       <h1 className="name">
         404 not Found <span id="dot">:(</span>
       </h1>
