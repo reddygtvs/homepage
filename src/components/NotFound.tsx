@@ -1,15 +1,20 @@
 import React from "react";
 import Link from "./Link";
+import img404 from "../icons/404.svg";
 
 interface TagData {
   href: string;
   name: string;
+  imageSrc: string;
+  imageAlt: string;
 }
 
 const NotFound: React.FC = () => {
   const homeLink: TagData = {
     href: "/",
-    name: "Head back Home",
+    name: "Head_Back_Home",
+    imageSrc: img404,
+    imageAlt: "404",
   };
   return (
     <div className="grid place-items-center m-[10px]">
