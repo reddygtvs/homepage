@@ -1,19 +1,13 @@
 import React, { lazy, Suspense } from "react";
 import { Link, useParams } from "react-router-dom";
 import Spinner from "./Spinner";
+// import LazyContent from "../blogs/sample-blog.mdx";
 
 const LazyIter = lazy(
-  () =>
-    // eslint-disable-next-line import/no-webpack-loader-syntax
-    import(
-      "!@mdx-js/loader!../blogs/animation-iteration-count-css-rabbithole.mdx"
-    )
+  () => import("../blogs/animation-iteration-count-css-rabbithole.mdx")
 );
 
-const LazyContent = lazy(
-  // eslint-disable-next-line import/no-webpack-loader-syntax
-  () => import("!@mdx-js/loader!../blogs/sample-blog.mdx")
-);
+const LazyContent = lazy(() => import("../blogs/sample-blog.mdx"));
 
 const MdxComponent: React.FC = () => {
   const { filename } = useParams<{ filename: string }>();

@@ -1,12 +1,17 @@
 {
   // "include": ["src/**/*", "package.json"],
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "node",
-    "types": ["react-syntax-highlighter", "mdx"],
+    "types": [
+      "react-syntax-highlighter",
+      "mdx",
+      "vite/client",
+      "vite-plugin-svgr/client"
+    ],
     "resolveJsonModule": true,
     "allowJs": false,
     "noEmit": true,
@@ -18,6 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true
   },
+  "include": ["src"],
   "exclude": [
     // other exclusions
     "**/*.mdx"
