@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Link, useParams } from "react-router-dom";
-import Spinner from "./Spinner";
-// import LazyContent from "../blogs/sample-blog.mdx";
+import LazyBlog from "./LazyBlog";
 
 const LazyIter = lazy(
   () => import("../blogs/animation-iteration-count-css-rabbithole.mdx")
@@ -19,24 +18,16 @@ const MdxComponent: React.FC = () => {
         <h3 className="my-3 text-xl">{"<<Back to Blogs"}</h3>
       </Link>
       <div className="max-[580px]:max-w-[360px] w-[600px]">
-        <div>
-          {sampleBlogCheck === filename && (
-            <Suspense fallback={<Spinner />}>
-              <div className="prose prose-ul: list-none prose-hr:border-black py-8 prose-h1:text-purple-700 prose-h1:underline prose-h1:decoration-cyan-500 prose-h2:my-3 prose-p:m-0 font-sans prose-hr:my-[5px] prose-h2:text-fuchsia-600 prose-h2:underline prose-h2:decoration-pink-600 prose-blockquote:bg-green-300 ">
-                <LazyContent />
-              </div>
-            </Suspense>
-          )}
-        </div>
-        <div>
-          {animationBlogCheck === filename && (
-            <Suspense fallback={<Spinner />}>
-              <div className="prose prose-ul:list-none prose-hr:border-black py-8 prose-h1:text-purple-700 prose-h1:underline prose-h1:decoration-cyan-500 prose-h2:my-3 prose-p:m-0 font-sans prose-hr:my-[5px] prose-h2:text-fuchsia-600 prose-h2:underline prose-h2:decoration-pink-600 prose-blockquote:bg-green-300 ">
-                <LazyIter />
-              </div>
-            </Suspense>
-          )}
-        </div>
+        <LazyBlog
+          filename={filename || ""}
+          blogCheck={sampleBlogCheck}
+          Content={LazyContent}
+        />
+        <LazyBlog
+          filename={filename || ""}
+          blogCheck={animationBlogCheck}
+          Content={LazyIter}
+        />
       </div>
     </div>
   );
