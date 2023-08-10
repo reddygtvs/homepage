@@ -18,25 +18,25 @@ const Tags: React.FC = () => {
     href: "https://github.com/reddygtvs",
     name: "Github",
     imageSrc: githubIcon,
-    imageAlt: "Github",
+    imageAlt: "Link to my Github",
   };
   const linkedin: TagData = {
     href: "https://www.linkedin.com/in/tushar-reddy/",
     name: "LinkedIn",
     imageSrc: linkedinIcon,
-    imageAlt: "LinkedIn",
+    imageAlt: "Link to my LinkedIn (pun not intended)",
   };
   const resume: TagData = {
     href: pdf,
     name: "Resume",
     imageSrc: resumeIcon,
-    imageAlt: "Resume",
+    imageAlt: "Link to my Resume",
   };
   const contact: TagData = {
     href: "mailto:tusharreddy2023@gmail.com",
     name: "Contact",
     imageSrc: contactIcon,
-    imageAlt: "Contact Me",
+    imageAlt: "My email contact",
   };
 
   return (
