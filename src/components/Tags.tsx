@@ -11,6 +11,7 @@ interface TagData {
   name: string;
   imageSrc: string;
   imageAlt: string;
+  openInNewTab: boolean; // Optional prop to control noopener noreferrer behavior
 }
 
 const Tags: React.FC = () => {
@@ -19,24 +20,28 @@ const Tags: React.FC = () => {
     name: "Github",
     imageSrc: githubIcon,
     imageAlt: "Link to my Github",
+    openInNewTab: true,
   };
   const linkedin: TagData = {
     href: "https://www.linkedin.com/in/tushar-reddy/",
     name: "LinkedIn",
     imageSrc: linkedinIcon,
     imageAlt: "Link to my LinkedIn (pun not intended)",
+    openInNewTab: true,
   };
   const resume: TagData = {
     href: pdf,
     name: "Resume",
     imageSrc: resumeIcon,
     imageAlt: "Link to my Resume",
+    openInNewTab: true,
   };
   const contact: TagData = {
     href: "mailto:tusharreddy2023@gmail.com",
     name: "Contact",
     imageSrc: contactIcon,
     imageAlt: "My email contact",
+    openInNewTab: false,
   };
 
   return (

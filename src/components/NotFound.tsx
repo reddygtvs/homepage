@@ -7,6 +7,7 @@ interface TagData {
   name: string;
   imageSrc: string;
   imageAlt: string;
+  openInNewTab: boolean; // Optional prop to control noopener noreferrer behavior
 }
 
 const NotFound: React.FC = () => {
@@ -15,6 +16,7 @@ const NotFound: React.FC = () => {
     name: "Head_Back_Home",
     imageSrc: img404,
     imageAlt: "404",
+    openInNewTab: false,
   };
   return (
     <div className="grid place-items-center">
