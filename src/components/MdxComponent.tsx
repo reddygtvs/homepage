@@ -6,11 +6,11 @@ const LazyIter = lazy(
   () => import("../blogs/animation-iteration-count-css-rabbithole.mdx")
 );
 
-const LazyContent = lazy(() => import("../blogs/sample-blog.mdx"));
+const LazyContent = lazy(() => import("../blogs/react-markdown.mdx"));
 
 const MdxComponent: React.FC = () => {
   const { filename } = useParams<{ filename: string }>();
-  const sampleBlogCheck = "sample-blog.mdx";
+  const sampleBlogCheck = "react-markdown.mdx";
   const animationBlogCheck = "animation-iteration-count-css-rabbithole.mdx";
   return (
     <div className="text-black">

@@ -11,8 +11,8 @@ interface BlogData {
 
 const blogsData: BlogData[] = [
   {
-    title: "Sample blog to test out routes",
-    filename: "sample-blog.mdx",
+    title: "A demo of react-markdown",
+    filename: "react-markdown.mdx",
     date: "15 | 09 | 2022",
     description:
       "A demo of react-markdown, with syntax higlighting in codeblocks along with passing components",
