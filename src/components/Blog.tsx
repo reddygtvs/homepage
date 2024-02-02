@@ -11,6 +11,13 @@ interface BlogData {
 
 const blogsData: BlogData[] = [
   {
+    title: "React & Vite: A match made in heaven",
+    filename: "react-vite.mdx",
+    date: "11 | 06 | 2023",
+    description:
+      "A basic overview of Vite & how it makes for a great development experience",
+  },
+  {
     title: "A demo of react-markdown",
     filename: "react-markdown.mdx",
     date: "15 | 09 | 2022",
