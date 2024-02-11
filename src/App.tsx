@@ -5,7 +5,7 @@ import pfp from "./images/pfp.webp";
 
 const App: React.FC = () => {
   return (
-    <div>
+    <>
       <div className="grid place-items-center">
         <div>
           <Image
@@ -33,7 +33,7 @@ const App: React.FC = () => {
           <Tags />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
