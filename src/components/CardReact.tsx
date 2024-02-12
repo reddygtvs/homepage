@@ -17,7 +17,7 @@ const CardReact: React.FC<CardReactProps> = ({ title, text, href, img }) => {
     <Card
       onClick={handleCardClick}
       border="light"
-      className="card inline-flex text-center rounded-xl mx-5 my-6 p-2 cursor-pointer shadow-md hover:shadow-2xl"
+      className="card mx-5 my-6 inline-flex cursor-pointer rounded-xl p-2 text-center shadow-md hover:shadow-2xl"
       style={{ width: "18rem", color: "purple" }}
     >
       <Card.Img variant="top" src={img} />

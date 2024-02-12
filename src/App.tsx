@@ -18,7 +18,7 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid place-items-center w-full text-center">
+      <div className="grid w-full place-items-center text-center">
         <div className="grid">
           <div>
             <h1 className="name mb-2">

@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="grid place-items-center text-center w-[100vw]">
+    <div className="grid w-[100vw] place-items-center text-center">
       <div>
         <CardReact {...phonebookData} />
         <CardReact {...countryData} />

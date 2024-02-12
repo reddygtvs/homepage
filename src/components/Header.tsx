@@ -13,24 +13,24 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="flex justify-center place-items-center w-screen">
+    <header className="flex w-screen place-items-center justify-center">
       <Link
         to="/"
-        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-lg hover:-translate-y-1 transition transform duration-500 ease"
+        className="ease mx-[2vw] transform p-6 text-lg text-[black] no-underline transition duration-500 hover:-translate-y-1 hover:text-[magenta]"
         style={location.pathname === "/" ? activeLinkStyle : {}}
       >
         Home
       </Link>
       <Link
         to="/projects"
-        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-lg hover:-translate-y-1 transition transform duration-500 ease"
+        className="ease mx-[2vw] transform p-6 text-lg text-[black] no-underline transition duration-500 hover:-translate-y-1 hover:text-[magenta]"
         style={location.pathname === "/projects" ? activeLinkStyle : {}}
       >
         Projects
       </Link>
       <Link
         to="/blogs"
-        className="hover:text-[magenta] p-6 text-[black] no-underline mx-[2vw] text-lg hover:-translate-y-1 transition transform duration-500 ease"
+        className="ease mx-[2vw] transform p-6 text-lg text-[black] no-underline transition duration-500 hover:-translate-y-1 hover:text-[magenta]"
         style={
           location.pathname !== "/projects" && location.pathname !== "/"
             ? activeLinkStyle

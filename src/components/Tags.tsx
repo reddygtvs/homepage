@@ -45,7 +45,7 @@ const Tags: React.FC = () => {
   };
 
   return (
-    <div className="pb-5 grid place-items-center flex-row sm:flex sm:flex-col">
+    <div className="grid flex-row place-items-center pb-5 sm:flex sm:flex-col">
       <Link {...github} />
       <Link {...linkedin} />
       <Link {...resume} />

@@ -20,7 +20,7 @@ const Link: React.FC<LinkProps> = ({
 
   return (
     <a
-      className="App-link underline underline-offset-4 decoration-2 decoration-red-600 mt-4 rounded-lg inline-flex mx-[1.5vw] px-2 py-1 text-black hover:text-white hover:bg-green-300 hover:underline-offset-2 "
+      className="App-link mx-[1.5vw] mt-4 inline-flex rounded-lg px-2 py-1 text-black underline decoration-red-600 decoration-2 underline-offset-4 hover:bg-green-300 hover:text-white hover:underline-offset-2 "
       href={href}
       target={target}
       rel={rel}
@@ -28,7 +28,7 @@ const Link: React.FC<LinkProps> = ({
       <img
         src={imageSrc}
         alt={imageAlt}
-        className="object-contain h-6 w-6 icon p-[0.5px]"
+        className="icon h-6 w-6 object-contain p-[0.5px]"
       />
       {name}
     </a>
