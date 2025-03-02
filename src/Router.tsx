@@ -6,7 +6,7 @@ import App from "./App";
 import NotFound from "./components/NotFound";
 import Projects from "./components/Projects";
 import Blog from "./components/Blog";
-import MdxComponent from "./components/MdxComponent";
+import BlogPost from "./components/BlogPost";
 
 const Router: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const Router: React.FC = () => {
           <Route path="/" element={<App />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blogs" element={<Blog />} />
-          <Route path="/blogs/:filename" element={<MdxComponent />} />
+          <Route path="/blogs/:filename" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

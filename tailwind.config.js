@@ -4,7 +4,8 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx,mdx}",
     "./src/router.tsx",
     "./index.html",
-    "./src/blogs/sample-blog.mdx",
+    "./src/blogs/*.mdx",
+    "./src/blogs/*.md",
   ],
   theme: {
     extend: {},
