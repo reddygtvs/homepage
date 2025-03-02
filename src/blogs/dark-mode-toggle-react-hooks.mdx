@@ -1,0 +1,167 @@
+---
+title: "Building a Dark Mode Toggle with React Hooks and CSS Variables"
+date: "2024-03-20"
+description: "Learn how to implement a user-friendly dark mode toggle using React's useState and useEffect hooks combined with CSS variables"
+---
+
+import DarkModeToggle from "../components/DarkModeToggle";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
+# Building a Dark Mode Toggle with React Hooks and CSS Variables
+
+Dark mode has become more than just a trendy feature – it's now an expected part of a good user experience. Not only does it look sleek, but it can reduce eye strain, save battery life on OLED screens, and make your app more accessible to users with light sensitivity.
+
+In this post, I'll show you how to create a simple yet effective dark mode toggle using React hooks and CSS variables. The best part? It's surprisingly easy to implement!
+
+## See It in Action
+
+Here's the dark mode toggle we'll be building:
+
+<div className="demo-container">
+  <h3 className="demo-title">Try the Dark Mode Toggle</h3>
+  <p className="demo-text">
+    Click the button below to toggle between light and dark themes. Notice how
+    smoothly the colors transition!
+  </p>
+  <DarkModeToggle />
+</div>
+
+Go ahead, give it a click! The toggle not only changes its own appearance but also updates the theme of its container. In a real application, this would affect your entire website or app.
+
+## Why Use CSS Variables?
+
+CSS variables (officially called custom properties) are perfect for theming because they can be:
+
+1. Defined once and referenced throughout your CSS
+2. Updated dynamically with JavaScript
+3. Inherited by child elements
+
+This means we can define our color scheme in one place and change it with a single line of JavaScript.
+
+Here's a simplified version of our theme variables:
+
+<SyntaxHighlighter language="css" style={a11yDark}>
+{`:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #4299e1;
+}
+
+[data-theme="dark"] {
+--bg-color: #1a202c;
+--text-color: #f7fafc;
+--accent-color: #63b3ed;
+}`}
+
+</SyntaxHighlighter>
+
+By toggling the `data-theme` attribute on our HTML element, we can switch between these two sets of variables, instantly changing the appearance of our entire application.
+
+## The React Hooks Magic
+
+React's hooks make it incredibly easy to add state and side effects to our components. For our dark mode toggle, we'll use two essential hooks:
+
+1. `useState` to track whether dark mode is active
+2. `useEffect` to apply the theme to the document and save the preference
+
+Here's the core of our toggle component:
+
+<SyntaxHighlighter language="jsx" style={a11yDark}>
+{`function DarkModeToggle() {
+  // Check for saved theme or user preference
+  const getInitialTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) return savedTheme;
+    
+    return window.matchMedia('(prefers-color-scheme: dark)').matches 
+      ? 'dark' 
+      : 'light';
+  };
+
+const [theme, setTheme] = useState(getInitialTheme);
+
+// Apply theme to document and save preference
+useEffect(() => {
+document.documentElement.setAttribute('data-theme', theme);
+localStorage.setItem('theme', theme);
+}, [theme]);
+
+// Toggle between light and dark
+const toggleTheme = () => {
+setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+};
+
+return (
+<button
+className="theme-toggle"
+onClick={toggleTheme}
+aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'} >
+{theme === 'light' ? '🌙' : '☀️'}
+{theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+</button>
+);
+}`}
+
+</SyntaxHighlighter>
+
+Let's break down what's happening:
+
+1. We check for a saved theme preference in localStorage, or fall back to the user's system preference
+2. When the theme changes, we update the `data-theme` attribute on the document and save the preference
+3. The toggle button simply switches between 'light' and 'dark'
+
+## Respecting User Preferences
+
+Notice how we check for `prefers-color-scheme: dark` in our initial theme logic? This is a media query that detects if the user has set a dark theme preference in their operating system.
+
+By checking this first, we ensure our app respects the user's system-wide preference by default, which is a nice touch that users appreciate. They can still override it with our toggle if they prefer.
+
+## Smooth Transitions
+
+To make the theme change feel polished, we can add a simple transition to our CSS:
+
+<SyntaxHighlighter language="css" style={a11yDark}>
+{`body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+transition: background-color 0.3s ease, color 0.3s ease;
+}`}
+
+</SyntaxHighlighter>
+
+This creates a smooth fade between themes instead of an abrupt change, making the experience feel more refined.
+
+## Persisting User Preferences
+
+One important aspect of our implementation is that it remembers the user's preference. By storing the theme choice in localStorage, we ensure that when a user returns to our site, their preferred theme is already applied.
+
+This small detail significantly improves the user experience – nobody wants to toggle their preference every time they visit your site!
+
+## Accessibility Considerations
+
+When implementing a dark mode toggle, don't forget about accessibility:
+
+1. Use sufficient contrast ratios in both themes
+2. Add proper `aria-label` attributes to the toggle button
+3. Ensure focus states are visible in both themes
+4. Test with screen readers to confirm the experience works for everyone
+
+## Beyond the Basics
+
+Once you have the basic toggle working, you can extend it in several ways:
+
+- Add more themes beyond just light and dark
+- Create theme-specific animations or illustrations
+- Allow users to schedule theme changes (e.g., dark at night, light during day)
+- Customize specific components to look their best in each theme
+
+## Wrapping Up
+
+Implementing a dark mode toggle doesn't have to be complicated. With React hooks and CSS variables, you can create a smooth, user-friendly theme switcher that respects user preferences and enhances your application's experience.
+
+The best UI features are often the ones that feel so natural that users barely notice them – they just work exactly as expected. A well-implemented dark mode toggle is exactly that kind of feature.
+
+What other simple UI features do you think make a big difference in user experience? Let me know in the comments!

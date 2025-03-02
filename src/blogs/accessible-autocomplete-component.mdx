@@ -1,0 +1,209 @@
+---
+title: "Creating an Accessible Autocomplete Component from Scratch"
+date: "2024-03-22"
+description: "Learn how to build a fully accessible autocomplete search component with React, focusing on keyboard navigation and ARIA attributes"
+---
+
+import Autocomplete from "../components/Autocomplete";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
+# Creating an Accessible Autocomplete Component from Scratch
+
+We've all used autocomplete components – those handy search boxes that suggest options as you type. They're everywhere from Google search to your favorite e-commerce site. But have you ever tried using one with just your keyboard? Or with a screen reader? For many users with disabilities, these components can be frustratingly difficult to use.
+
+In this post, I'll walk through building an autocomplete component that's not just functional, but fully accessible to everyone. And the best part? It's not even that complicated!
+
+## Try It Out
+
+Before we dive in, give this autocomplete component a spin:
+
+<Autocomplete />
+
+Try typing a programming language name (like "Java" or "Python") and notice how you can:
+
+- Navigate through suggestions with your keyboard (up/down arrows)
+- Select an option with Enter
+- Dismiss the dropdown with Escape
+- Or just click with your mouse if that's your thing
+
+This kind of seamless experience should be available to all users, regardless of how they navigate the web.
+
+## Why Accessibility Matters
+
+Let's be real – accessibility often gets pushed to the bottom of the priority list. "We'll get to it later," we say. But here's the thing: accessible components aren't just for users with disabilities. They create a better experience for everyone.
+
+Think about it:
+
+- Keyboard navigation helps power users work more efficiently
+- Clear visual states help users with cognitive disabilities, but also help anyone who's distracted or tired
+- Proper labeling helps screen reader users, but also improves SEO
+
+Plus, in many countries, web accessibility is a legal requirement. So there's that.
+
+## The Accessibility Checklist
+
+For an autocomplete component to be truly accessible, it needs to:
+
+1. Be fully keyboard navigable
+2. Announce changes to screen readers
+3. Have proper visual focus indicators
+4. Follow established design patterns
+5. Provide clear feedback for all states
+
+Let's see how we can implement these requirements without getting lost in complexity.
+
+## The Core Component Structure
+
+At its heart, our autocomplete component is pretty simple. We need:
+
+1. An input field for typing
+2. A dropdown list of suggestions
+3. State management to track what's happening
+
+Here's a simplified version of our component structure:
+
+<SyntaxHighlighter language="jsx" style={a11yDark}>
+  {`function Autocomplete({ items }) {
+  const [inputValue, setInputValue] = useState('');
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  
+  // Filter items based on input
+  // Handle keyboard navigation
+  // Render input and dropdown
+}`}
+</SyntaxHighlighter>
+
+The real magic happens in how we handle user interactions and communicate with assistive technologies.
+
+## Making It Keyboard Accessible
+
+Keyboard accessibility is the foundation of an accessible component. Users should be able to do everything without touching a mouse.
+
+Here's how we handle keyboard navigation:
+
+<SyntaxHighlighter language="jsx" style={a11yDark}>
+{`const handleKeyDown = (e) => {
+  if (!isOpen) return;
+
+switch (e.key) {
+case 'ArrowDown':
+e.preventDefault();
+setSelectedIndex(prev =>
+prev < filteredItems.length - 1 ? prev + 1 : prev
+);
+break;
+case 'ArrowUp':
+e.preventDefault();
+setSelectedIndex(prev => (prev > 0 ? prev - 1 : 0));
+break;
+case 'Enter':
+if (selectedIndex >= 0) {
+e.preventDefault();
+setInputValue(filteredItems[selectedIndex]);
+setIsOpen(false);
+}
+break;
+case 'Escape':
+e.preventDefault();
+setIsOpen(false);
+break;
+}
+};`}
+
+</SyntaxHighlighter>
+
+Notice how we're preventing the default behavior for arrow keys (which would move the cursor in the input) and handling navigation ourselves. This gives users precise control over the suggestion list.
+
+## Speaking to Screen Readers with ARIA
+
+ARIA (Accessible Rich Internet Applications) attributes are how we communicate with screen readers. They're like secret messages that tell assistive technologies what's happening in our UI.
+
+Here are the key ARIA attributes we need:
+
+```jsx
+<input
+  aria-autocomplete="list"
+  aria-controls="listbox-id"
+  aria-expanded={isOpen}
+  aria-activedescendant={selectedIndex >= 0 ? `option-${selectedIndex}` : undefined}
+/>
+
+<ul
+  id="listbox-id"
+  role="listbox"
+>
+  {filteredItems.map((item, index) => (
+    <li
+      id={`option-${index}`}
+      role="option"
+      aria-selected={selectedIndex === index}
+    >
+      {item}
+    </li>
+  ))}
+</ul>
+```
+
+These attributes tell screen readers:
+
+- This is an autocomplete with a list of suggestions
+- Whether the dropdown is currently open
+- Which option is currently selected
+- The relationship between the input and the dropdown
+
+## Visual Feedback Is Crucial
+
+Accessibility isn't just about screen readers. Visual feedback helps users with cognitive disabilities, motor impairments, and really anyone using your component.
+
+Some key visual considerations:
+
+- Clear focus styles (never remove the focus outline without replacing it)
+- Distinct hover and selection states
+- Sufficient color contrast
+- Visible text at various zoom levels
+
+A bit of thoughtful CSS goes a long way:
+
+```css
+.autocomplete-option:focus-visible {
+  outline: 2px solid #4299e1;
+  outline-offset: -2px;
+}
+
+.autocomplete-option.selected {
+  background-color: #ebf8ff;
+  font-weight: 500;
+}
+```
+
+## Testing Is Non-Negotiable
+
+Building an accessible component is only half the battle. You need to test it to make sure it actually works for everyone.
+
+At minimum, try:
+
+1. Using your component with only the keyboard
+2. Turning on a screen reader and navigating through it
+3. Zooming in to 200% to ensure everything is still usable
+4. Checking color contrast with a tool like the axe DevTools
+
+## Common Pitfalls to Avoid
+
+In my experience building accessible components, here are some common mistakes to watch out for:
+
+1. **Keyboard traps**: Make sure users can tab away from your component
+2. **Missing focus states**: Always provide visible focus indicators
+3. **Timeout issues**: Some users need more time to interact with UI elements
+4. **Relying on color alone**: Always use multiple indicators (color + text/shape)
+5. **Forgetting about touch devices**: Ensure your component works on mobile too
+
+## Wrapping Up
+
+Building accessible components isn't as hard as it seems, and the benefits are enormous. By making your autocomplete component accessible, you're not just helping users with disabilities – you're creating a better experience for everyone.
+
+Remember, accessibility isn't a checkbox to tick off – it's a mindset. Start thinking about it from the beginning of your projects, and it becomes a natural part of your development process.
+
+What accessibility challenges have you faced in your projects? I'm always looking for ways to improve my skills and help others. Drop me an email!
