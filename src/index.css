@@ -3,6 +3,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Color System */
+:root {
+  /* Brand Colors */
+  --color-brand-1: #ff3d77; /* Primary Pink */
+  --color-brand-2: #b933f9; /* Primary Purple */
+  --color-brand-3: #5f19dd; /* Deep Purple */
+  --color-brand-4: #ffa63d; /* Orange */
+
+  /* Text Colors */
+  --color-text-primary: #212529;
+  --color-text-secondary: #f22952;
+  --color-text-light: #f8f9fa;
+
+  /* UI Colors */
+  --color-background: #f8f9fa;
+  --color-background-alt: #ffffff;
+  --color-border: #dee2e6;
+  --color-accent: #6366f1;
+
+  /* Interactive States */
+  --color-focus: #4299e1;
+  --color-hover: #ebf8ff;
+  --color-error: #e53e3e;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    -45deg,
+    var(--color-brand-1),
+    var(--color-brand-2),
+    var(--color-brand-3)
+  );
+  --gradient-background: linear-gradient(-45deg, #e9ffe9, #e9dbff, #f4e5f7);
+}
+
+[data-theme="dark"] {
+  --color-text-primary: #f8f9fa;
+  --color-text-secondary: #ff3d77;
+  --color-text-light: #212529;
+  --color-background: #212529;
+  --color-background-alt: #2d3748;
+  --color-border: #495057;
+  --color-accent: #818cf8;
+  --color-focus: #63b3ed;
+  --color-hover: #2d3748;
+}
+
 /* General styles */
 body,
 html {
@@ -17,15 +63,15 @@ html {
 
 @keyframes pulse {
   0% {
-    border: 7px solid #ff3d77;
+    border: 7px solid var(--color-brand-1);
     transform: scale(1, 1);
   }
   50% {
-    border: 7px solid #b933f9;
+    border: 7px solid var(--color-brand-2);
     transform: scale(1.0075, 1.0075);
   }
   100% {
-    border: 7px solid #5f19dd;
+    border: 7px solid var(--color-brand-3);
     transform: scale(1, 1);
   }
 }
@@ -74,7 +120,7 @@ img {
 }
 
 #dot {
-  color: var(--red);
+  color: var(--color-brand-1);
   display: inline-flex;
   -webkit-animation-name: bounce;
   -webkit-animation-timing-function: ease;
@@ -84,9 +130,9 @@ img {
   animation-timing-function: ease;
   animation-duration: 2s;
   animation-iteration-count: 2;
-  -webkit-text-fill-color: #b933f9;
+  -webkit-text-fill-color: var(--color-brand-2);
   animation-delay: 1s;
-  color: #5a03fc;
+  color: var(--color-brand-3);
 }
 
 /* App link */
@@ -111,13 +157,7 @@ img {
 
 /* Name */
 .name {
-  background: -webkit-linear-gradient(
-    -45deg,
-    #ffa63d,
-    #ff3d77,
-    #b933f9,
-    #5f19dd
-  );
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.75rem;
@@ -127,13 +167,7 @@ img {
 
 /* Skills */
 #skills {
-  background: -webkit-linear-gradient(
-    -45deg,
-
-    #ff3d77,
-    #b933f9,
-    #5f19dd /* #5a03fc */
-  );
+  background: var(--gradient-primary);
   font-size: 1.17rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -141,33 +175,16 @@ img {
 
 /* Card Title */
 #cardTitle {
-  background: -webkit-linear-gradient(-45deg, #ff3d77, #b933f9, #5a03fc);
+  background: var(--gradient-primary);
   font-size: 1.5rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 body {
-  background: linear-gradient(-45deg, #e9ffe9, #e9dbff, #f4e5f7);
-  background-size: 1000% 1000%;
-  animation: gradient 6s ease infinite;
-  background-color: black;
+  background: var(--color-background);
   height: 100vh;
-  color: black;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-    color: #000000;
-  }
-  50% {
-    background-position: 100% 50%;
-    color: black;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  color: var(--color-text-primary);
 }
 
 .Header a.active {
@@ -176,8 +193,8 @@ body {
 /* Blog home */
 
 .loading {
-  border: 6px solid black;
-  border-top-color: blueviolet;
+  border: 6px solid var(--color-text-primary);
+  border-top-color: var(--color-brand-2);
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 }

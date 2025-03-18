@@ -1,27 +1,3 @@
-/* Define CSS variables for light theme (default) */
-:root {
-  --background-color: #f8f9fa;
-  --text-color: #212529;
-  --border-color: #dee2e6;
-  --accent-color: #6366f1;
-  --toggle-bg: #e9ecef;
-  --toggle-thumb: #ffffff;
-  --container-bg: #ffffff;
-  --container-border: #e9ecef;
-}
-
-/* Define CSS variables for dark theme */
-[data-theme="dark"] {
-  --background-color: #212529;
-  --text-color: #f8f9fa;
-  --border-color: #495057;
-  --accent-color: #818cf8;
-  --toggle-bg: #495057;
-  --toggle-thumb: #818cf8;
-  --container-bg: #2d3748;
-  --container-border: #4a5568;
-}
-
 /* Add transition to body for smooth theme changes */
 body {
   transition:
@@ -31,8 +7,8 @@ body {
 
 /* Theme container */
 .theme-container {
-  background-color: var(--container-bg);
-  border: 1px solid var(--container-border);
+  background-color: var(--color-background-alt);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 20px;
   max-width: 400px;
@@ -53,7 +29,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
-  color: var(--text-color) !important;
+  color: var(--color-text-primary) !important;
 }
 
 /* Toggle wrapper */
@@ -75,7 +51,7 @@ body {
 }
 
 .theme-toggle-button:focus-visible {
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   border-radius: 12px;
 }
@@ -85,7 +61,7 @@ body {
   position: relative;
   width: 48px;
   height: 24px;
-  background-color: var(--toggle-bg);
+  background-color: var(--color-border);
   border-radius: 12px;
   transition: background-color 0.3s ease;
 }
@@ -97,7 +73,7 @@ body {
   left: 2px;
   width: 20px;
   height: 20px;
-  background-color: var(--toggle-thumb);
+  background-color: var(--color-background-alt);
   border-radius: 50%;
   transition: transform 0.3s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -112,5 +88,5 @@ body {
 .theme-description {
   font-size: 14px;
   margin-top: 16px;
-  color: var(--text-color);
+  color: var(--color-text-primary);
 }
