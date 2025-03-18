@@ -1,9 +1,9 @@
 import React from "react";
 
-const Spinner: React.FC = () => {
+const Spinner = () => {
   return (
-    <div className="m-10 grid place-items-center">
-      <div className="loading inline-block h-[50px] w-[50px] rounded-[50%]"></div>
+    <div role="status" className="flex h-screen items-center justify-center">
+      <div className="loading h-16 w-16 rounded-full border-4" />
     </div>
   );
 };

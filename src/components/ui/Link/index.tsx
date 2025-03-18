@@ -5,7 +5,7 @@ interface LinkProps {
   name: string;
   imageSrc: string;
   imageAlt: string;
-  openInNewTab?: boolean; // Optional prop to control noopener noreferrer behavior
+  openInNewTab?: boolean;
 }
 
 const Link: React.FC<LinkProps> = ({
@@ -13,17 +13,14 @@ const Link: React.FC<LinkProps> = ({
   name,
   imageSrc,
   imageAlt,
-  openInNewTab,
+  openInNewTab = true,
 }) => {
-  const target = openInNewTab ? "_blank" : "_self";
-  const rel = openInNewTab === false ? "" : "noopener noreferrer";
-
   return (
     <a
-      className="App-link mx-[1.5vw] mt-4 inline-flex rounded-lg px-2 py-1 text-black underline decoration-red-600 decoration-2 underline-offset-4 hover:bg-green-300 hover:text-white hover:underline-offset-2 "
       href={href}
-      target={target}
-      rel={rel}
+      target={openInNewTab ? "_blank" : "_self"}
+      rel={openInNewTab ? "noopener noreferrer" : undefined}
+      className="App-link mx-[1.5vw] mt-4 inline-flex rounded-lg px-2 py-1 text-black underline decoration-red-600 decoration-2 underline-offset-4 hover:bg-green-300 hover:text-white hover:underline-offset-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-600"
     >
       <img
         src={imageSrc}
