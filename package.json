@@ -4,6 +4,9 @@
   "private": true,
   "types": "src/index.d.ts",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "@mdx-js/rollup": "^2.3.0",

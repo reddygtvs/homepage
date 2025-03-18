@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # You can specify your Node.js version here
+          node-version: '18'  # Updated to Node.js 18 for compatibility with newer packages
 
       - name: Install Prettier
         run: npm install --save-dev --save-exact prettier
