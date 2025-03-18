@@ -68,18 +68,51 @@ export async function getAllBlogPosts(): Promise<BlogMetadata[]> {
   });
 }
 
+interface MDXModule {
+  default: React.ComponentType & {
+    frontmatter?: Record<string, any>;
+  };
+  frontmatter?: Record<string, any>;
+}
+
 // This function will be used to get a specific blog post by slug
 export async function getBlogPostBySlug(slug: string): Promise<{
   metadata: BlogMetadata;
   Content: React.ComponentType;
 } | null> {
   try {
-    // Try to find the file with .mdx extension
-    const mdxModule = await import(`/src/blogs/${slug}.mdx`);
-    const filename = `${slug}.mdx`;
+    // Use the same glob pattern as getAllBlogPosts
+    const mdxFiles = import.meta.glob<MDXModule>("/src/blogs/*.mdx", {
+      eager: true,
+    });
+    const mdFiles = import.meta.glob<MDXModule>("/src/blogs/*.md", {
+      eager: true,
+    });
+    const allFiles = { ...mdxFiles, ...mdFiles };
+
+    // Find the file that matches our slug
+    const filePath = Object.keys(allFiles).find(
+      (path) => path.endsWith(`${slug}.mdx`) || path.endsWith(`${slug}.md`),
+    );
+
+    if (!filePath) {
+      console.error("Blog post not found:", slug);
+      return null;
+    }
+
+    const module = allFiles[filePath];
+    const filename = filePath.split("/").pop() || "";
 
     // Extract frontmatter
-    const frontmatter = mdxModule.frontmatter || {};
+    let frontmatter: Record<string, any> = {};
+    if (module.frontmatter) {
+      frontmatter = module.frontmatter;
+    } else if (module.default && typeof module.default === "string") {
+      const { data } = matter(module.default);
+      frontmatter = data;
+    } else if (module.default && module.default.frontmatter) {
+      frontmatter = module.default.frontmatter;
+    }
 
     return {
       metadata: {
@@ -89,30 +122,10 @@ export async function getBlogPostBySlug(slug: string): Promise<{
         slug,
         filename,
       },
-      Content: mdxModule.default,
+      Content: module.default,
     };
   } catch (error) {
-    try {
-      // If .mdx not found, try .md
-      const mdModule = await import(`/src/blogs/${slug}.md`);
-      const filename = `${slug}.md`;
-
-      // For .md files, we need to parse frontmatter manually
-      const { data: frontmatter } = matter(mdModule.default);
-
-      return {
-        metadata: {
-          title: frontmatter.title || "Untitled",
-          date: frontmatter.date || "No date",
-          description: frontmatter.description || "No description",
-          slug,
-          filename,
-        },
-        Content: mdModule.default,
-      };
-    } catch (mdError) {
-      console.error("Blog post not found:", slug);
-      return null;
-    }
+    console.error("Error loading blog post:", error);
+    return null;
   }
 }
