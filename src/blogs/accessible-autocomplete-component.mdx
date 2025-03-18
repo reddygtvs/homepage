@@ -12,7 +12,7 @@ import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 We've all used autocomplete components – those handy search boxes that suggest options as you type. They're everywhere from Google search to your favorite e-commerce site. But have you ever tried using one with just your keyboard? Or with a screen reader? For many users with disabilities, these components can be frustratingly difficult to use.
 
-In this post, I'll walk through building an autocomplete component that's not just functional, but fully accessible to everyone. And the best part? It's not even that complicated!
+In this post, I'll walk through building an autocomplete component that's not just functional, but fully accessible to everyone.
 
 ## Try It Out
 
@@ -31,15 +31,13 @@ This kind of seamless experience should be available to all users, regardless of
 
 ## Why Accessibility Matters
 
-Let's be real – accessibility often gets pushed to the bottom of the priority list. "We'll get to it later," we say. But here's the thing: accessible components aren't just for users with disabilities. They create a better experience for everyone.
-
-Think about it:
+Accessibility often gets pushed to the bottom of the priority list, but accessible components create a better experience for everyone:
 
 - Keyboard navigation helps power users work more efficiently
 - Clear visual states help users with cognitive disabilities, but also help anyone who's distracted or tired
 - Proper labeling helps screen reader users, but also improves SEO
 
-Plus, in many countries, web accessibility is a legal requirement. So there's that.
+Web accessibility is also a legal requirement in many countries.
 
 ## The Accessibility Checklist
 
@@ -55,7 +53,7 @@ Let's see how we can implement these requirements without getting lost in comple
 
 ## The Core Component Structure
 
-At its heart, our autocomplete component is pretty simple. We need:
+The autocomplete component requires three main elements:
 
 1. An input field for typing
 2. A dropdown list of suggestions
@@ -76,7 +74,7 @@ Here's a simplified version of our component structure:
 }`}
 </SyntaxHighlighter>
 
-The real magic happens in how we handle user interactions and communicate with assistive technologies.
+The component handles user interactions and communicates with assistive technologies through ARIA attributes.
 
 ## Making It Keyboard Accessible
 
@@ -115,11 +113,11 @@ break;
 
 </SyntaxHighlighter>
 
-Notice how we're preventing the default behavior for arrow keys (which would move the cursor in the input) and handling navigation ourselves. This gives users precise control over the suggestion list.
+We prevent the default behavior for arrow keys (which would move the cursor in the input) and handle navigation ourselves. This gives users precise control over the suggestion list.
 
 ## Speaking to Screen Readers with ARIA
 
-ARIA (Accessible Rich Internet Applications) attributes are how we communicate with screen readers. They're like secret messages that tell assistive technologies what's happening in our UI.
+ARIA (Accessible Rich Internet Applications) attributes enable communication with screen readers. These attributes provide information to assistive technologies about the UI state and structure.
 
 Here are the key ARIA attributes we need:
 
@@ -156,16 +154,16 @@ These attributes tell screen readers:
 
 ## Visual Feedback Is Crucial
 
-Accessibility isn't just about screen readers. Visual feedback helps users with cognitive disabilities, motor impairments, and really anyone using your component.
+Accessibility isn't just about screen readers. Visual feedback helps users with cognitive disabilities, motor impairments, and anyone using your component.
 
-Some key visual considerations:
+Key visual considerations:
 
 - Clear focus styles (never remove the focus outline without replacing it)
 - Distinct hover and selection states
 - Sufficient color contrast
 - Visible text at various zoom levels
 
-A bit of thoughtful CSS goes a long way:
+Here's the CSS for focus and selection states:
 
 ```css
 .autocomplete-option:focus-visible {
@@ -179,11 +177,9 @@ A bit of thoughtful CSS goes a long way:
 }
 ```
 
-## Testing Is Non-Negotiable
+## Testing Is Essential
 
-Building an accessible component is only half the battle. You need to test it to make sure it actually works for everyone.
-
-At minimum, try:
+Testing ensures your accessible component works for all users. Test the following:
 
 1. Using your component with only the keyboard
 2. Turning on a screen reader and navigating through it
@@ -192,7 +188,7 @@ At minimum, try:
 
 ## Common Pitfalls to Avoid
 
-In my experience building accessible components, here are some common mistakes to watch out for:
+When building accessible components, here are some common mistakes to watch out for:
 
 1. **Keyboard traps**: Make sure users can tab away from your component
 2. **Missing focus states**: Always provide visible focus indicators
@@ -202,8 +198,8 @@ In my experience building accessible components, here are some common mistakes t
 
 ## Wrapping Up
 
-Building accessible components isn't as hard as it seems, and the benefits are enormous. By making your autocomplete component accessible, you're not just helping users with disabilities – you're creating a better experience for everyone.
+Building accessible components creates a better experience for all users. By implementing proper accessibility features in your autocomplete component, you ensure it works for everyone, regardless of how they interact with the web.
 
-Remember, accessibility isn't a checkbox to tick off – it's a mindset. Start thinking about it from the beginning of your projects, and it becomes a natural part of your development process.
+Accessibility should be considered from the start of your projects, not as an afterthought.
 
 What accessibility challenges have you faced in your projects? I'm always looking for ways to improve my skills and help others. Drop me an email!
