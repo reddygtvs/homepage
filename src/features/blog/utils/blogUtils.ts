@@ -11,14 +11,21 @@ export interface BlogMetadata {
 // This function will be used to get all blog posts
 export async function getAllBlogPosts(): Promise<BlogMetadata[]> {
   // Use Vite's import.meta.glob to get all MDX files
-  const mdxFiles = import.meta.glob("../../blogs/*.mdx", { eager: true });
-  const mdFiles = import.meta.glob("../../blogs/*.md", { eager: true });
+  const mdxFiles = import.meta.glob("/src/blogs/*.mdx", { eager: true });
+  const mdFiles = import.meta.glob("/src/blogs/*.md", { eager: true });
+
+  console.log("MDX Files:", mdxFiles);
+  console.log("MD Files:", mdFiles);
 
   const allFiles = { ...mdxFiles, ...mdFiles };
+  console.log("All Files:", allFiles);
 
   // Process each file to extract metadata
   const blogPosts = Object.entries(allFiles).map(
     ([path, module]: [string, any]) => {
+      console.log("Processing file:", path);
+      console.log("Module:", module);
+
       // Extract filename from path
       const filename = path.split("/").pop() || "";
 
@@ -26,24 +33,32 @@ export async function getAllBlogPosts(): Promise<BlogMetadata[]> {
       let frontmatter: Record<string, any> = {};
 
       if (module.frontmatter) {
-        // If using remark-mdx-frontmatter, frontmatter is already parsed
+        console.log("Found frontmatter:", module.frontmatter);
         frontmatter = module.frontmatter;
-      } else if (typeof module.default === "string") {
-        // If it's a raw string (like in .md files), parse it with gray-matter
+      } else if (module.default && typeof module.default === "string") {
+        console.log("Found raw string content");
         const { data } = matter(module.default);
         frontmatter = data;
+      } else if (module.default && module.default.frontmatter) {
+        console.log("Found frontmatter in default export");
+        frontmatter = module.default.frontmatter;
       }
+
+      console.log("Final frontmatter:", frontmatter);
 
       // Create slug from filename (remove extension)
       const slug = filename.replace(/\.(mdx?|jsx?)$/, "");
 
-      return {
+      const post = {
         title: frontmatter.title || "Untitled",
         date: frontmatter.date || "No date",
         description: frontmatter.description || "No description",
         slug,
         filename,
       };
+
+      console.log("Created blog post:", post);
+      return post;
     },
   );
 
@@ -60,7 +75,7 @@ export async function getBlogPostBySlug(slug: string): Promise<{
 } | null> {
   try {
     // Try to find the file with .mdx extension
-    const mdxModule = await import(`../../blogs/${slug}.mdx`);
+    const mdxModule = await import(`/src/blogs/${slug}.mdx`);
     const filename = `${slug}.mdx`;
 
     // Extract frontmatter
@@ -79,7 +94,7 @@ export async function getBlogPostBySlug(slug: string): Promise<{
   } catch (error) {
     try {
       // If .mdx not found, try .md
-      const mdModule = await import(`../../blogs/${slug}.md`);
+      const mdModule = await import(`/src/blogs/${slug}.md`);
       const filename = `${slug}.md`;
 
       // For .md files, we need to parse frontmatter manually

@@ -11,6 +11,7 @@ const Blog: React.FC = () => {
     const fetchBlogPosts = async () => {
       try {
         const posts = await getAllBlogPosts();
+        console.log("Fetched blog posts:", posts);
         setBlogPosts(posts);
       } catch (error) {
         console.error("Error loading blog posts:", error);
@@ -27,15 +28,15 @@ const Blog: React.FC = () => {
   }
 
   return (
-    <div className="mx-2 grid place-items-center">
+    <div className="mx-2 grid place-items-center rounded-lg bg-white/80 p-4 shadow-lg">
       <h1 className="mb-3 max-w-[700px] p-2 py-4 text-left text-4xl font-bold text-purple-700 underline decoration-cyan-500 decoration-4">
         A Collection of my programming thoughts
       </h1>
-      <ul>
+      <ul className="w-full">
         {blogPosts.map((blog) => (
           <li key={blog.filename}>
             <Link to={`/blogs/${blog.filename}`}>
-              <div className="card my-3 inline-flex w-[800px] overflow-hidden rounded-md bg-slate-100 shadow-lg max-[580px]:max-w-[360px]">
+              <div className="card my-3 inline-flex w-[800px] overflow-hidden rounded-md bg-white shadow-lg max-[580px]:max-w-[360px]">
                 <div className="pb-2 pl-4 pr-2 pt-4">
                   <div className="mb-2 text-2xl font-bold text-fuchsia-600 underline decoration-pink-600 decoration-2">
                     {blog.title}
