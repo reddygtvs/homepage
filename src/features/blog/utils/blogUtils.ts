@@ -60,7 +60,7 @@ export async function getBlogPostBySlug(slug: string): Promise<{
 } | null> {
   try {
     // Try to find the file with .mdx extension
-    const mdxModule = await import(`../blogs/${slug}.mdx`);
+    const mdxModule = await import(`/src/blogs/${slug}.mdx`);
     const filename = `${slug}.mdx`;
 
     // Extract frontmatter
@@ -79,7 +79,7 @@ export async function getBlogPostBySlug(slug: string): Promise<{
   } catch (error) {
     try {
       // If .mdx not found, try .md
-      const mdModule = await import(`../blogs/${slug}.md`);
+      const mdModule = await import(`/src/blogs/${slug}.md`);
       const filename = `${slug}.md`;
 
       // For .md files, we need to parse frontmatter manually

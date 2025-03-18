@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "./Link";
-import img404 from "../icons/404.svg";
+import img404 from "../../assets/icons/404.svg";
 
 interface TagData {
   href: string;

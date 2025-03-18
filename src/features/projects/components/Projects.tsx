@@ -1,9 +1,9 @@
 import React from "react";
 import CardReact from "./CardReact";
-import phonebook from "../images/phonebook.webp";
-import countries from "../images/country.webp";
-import gym from "../images/gym.webp";
-import haemo from "../images/haemo.webp";
+import phonebook from "../../../assets/images/phonebook.webp";
+import countries from "../../../assets/images/country.webp";
+import gym from "../../../assets/images/gym.webp";
+import haemo from "../../../assets/images/haemo.webp";
 
 interface ProjectData {
   title: string;

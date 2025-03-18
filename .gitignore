@@ -13,3 +13,6 @@ yarn-error.log*
 /.changelog
 .npm/
 
+# Project specific
+ISSUES.md
+

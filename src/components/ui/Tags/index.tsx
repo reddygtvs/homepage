@@ -1,10 +1,10 @@
 import React from "react";
-import Link from "./Link";
-import pdf from "../pdf/tushar-resume.pdf";
-import githubIcon from "../icons/github.svg";
-import linkedinIcon from "../icons/linkedin.svg";
-import resumeIcon from "../icons/resume.svg";
-import contactIcon from "../icons/mail.svg";
+import Link from "../Link";
+import pdf from "../../../assets/pdf/tushar-resume.pdf";
+import githubIcon from "../../../assets/icons/github.svg";
+import linkedinIcon from "../../../assets/icons/linkedin.svg";
+import resumeIcon from "../../../assets/icons/resume.svg";
+import contactIcon from "../../../assets/icons/mail.svg";
 
 interface TagData {
   href: string;

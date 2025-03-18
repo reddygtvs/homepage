@@ -3,12 +3,12 @@ import { Link, useParams } from "react-router-dom";
 import LazyBlog from "./LazyBlog";
 
 const LazyIter = lazy(
-  () => import("../blogs/animation-iteration-count-css-rabbithole.mdx"),
+  () => import("/src/blogs/animation-iteration-count-css-rabbithole.mdx"),
 );
 
-const LazyContent = lazy(() => import("../blogs/react-markdown.mdx"));
+const LazyContent = lazy(() => import("/src/blogs/react-markdown.mdx"));
 
-const LazyViteContent = lazy(() => import("../blogs/react-vite.mdx"));
+const LazyViteContent = lazy(() => import("/src/blogs/react-vite.mdx"));
 
 const MdxComponent: React.FC = () => {
   const { filename } = useParams<{ filename: string }>();

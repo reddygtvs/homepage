@@ -1,7 +1,7 @@
 import React from "react";
-import Tags from "./components/Tags";
+import Tags from "./components/ui/Tags";
 import Image from "react-bootstrap/Image";
-import pfp from "./images/pfp.webp";
+import pfp from "./assets/images/pfp.webp";
 
 const App: React.FC = () => {
   return (

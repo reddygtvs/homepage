@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, BlogMetadata } from "../utils/blogUtils";
-import Spinner from "./Spinner";
+import Spinner from "../../../components/ui/Spinner";
 
 const Blog: React.FC = () => {
   const [loading, setLoading] = useState(true);

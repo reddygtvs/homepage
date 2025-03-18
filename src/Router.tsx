@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/ui/Header";
+import Footer from "./components/ui/Footer";
 import App from "./App";
-import NotFound from "./components/NotFound";
-import Projects from "./components/Projects";
-import Blog from "./components/Blog";
-import BlogPost from "./components/BlogPost";
+import NotFound from "./components/ui/NotFound";
+import Projects from "./features/projects/components/Projects";
+import Blog from "./features/blog/components/Blog";
+import BlogPost from "./features/blog/components/BlogPost";
 
 const Router: React.FC = () => {
   return (

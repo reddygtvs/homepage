@@ -1,8 +1,8 @@
 import React, { useEffect, useState, Suspense } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getBlogPostBySlug } from "../utils/blogUtils";
-import Spinner from "./Spinner";
-import NotFound from "./NotFound";
+import Spinner from "../../../components/ui/Spinner";
+import NotFound from "../../../components/ui/NotFound";
 
 const BlogPost: React.FC = () => {
   const { filename } = useParams<{ filename: string }>();

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import Spinner from "./Spinner";
+import Spinner from "../../../components/ui/Spinner";
 
 interface LazyBlogProps {
   filename: string;
