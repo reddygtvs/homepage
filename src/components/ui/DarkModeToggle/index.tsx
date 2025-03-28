@@ -3,8 +3,8 @@ import "./styles.css";
 
 const DarkModeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(() => {
-    // Check localStorage first
-    const savedTheme = localStorage.getItem("theme");
+    // Initialize from localStorage but don't affect global theme
+    const savedTheme = localStorage.getItem("demo-theme");
     if (savedTheme) {
       return savedTheme === "dark";
     }
@@ -13,12 +13,8 @@ const DarkModeToggle: React.FC = () => {
   });
 
   useEffect(() => {
-    // Update document attribute and localStorage when theme changes
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDark ? "dark" : "light",
-    );
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    // Only store the demo preference in localStorage, don't affect document
+    localStorage.setItem("demo-theme", isDark ? "dark" : "light");
   }, [isDark]);
 
   const toggleTheme = () => {
@@ -26,7 +22,7 @@ const DarkModeToggle: React.FC = () => {
   };
 
   return (
-    <div className="theme-container">
+    <div className={`theme-container ${isDark ? "theme-dark" : "theme-light"}`}>
       <div className="theme-content">
         <h3 className="theme-title">{isDark ? "Dark Mode" : "Light Mode"}</h3>
         <div className="toggle-wrapper">
