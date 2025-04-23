@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../Link";
-import pdf from "../../../assets/pdf/tushar-resume.pdf";
+import pdf from "../../../assets/pdf/tushar_resume_updated.pdf";
 import githubIcon from "../../../assets/icons/github.svg";
 import linkedinIcon from "../../../assets/icons/linkedin.svg";
 import resumeIcon from "../../../assets/icons/resume.svg";

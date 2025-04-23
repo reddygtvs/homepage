@@ -4,6 +4,9 @@ import phonebook from "../../../assets/images/phonebook.webp";
 import countries from "../../../assets/images/country.webp";
 import gym from "../../../assets/images/gym.webp";
 import haemo from "../../../assets/images/haemo.webp";
+import typeAnalysis from "../../../assets/images/type.webp";
+import movieConnectionsImg from "../../../assets/images/graph.webp";
+import movieConnectionsPdf from "../../../assets/pdf/graphFinal-2.pdf";
 
 interface ProjectData {
   title: string;
@@ -38,9 +41,25 @@ const Projects: React.FC = () => {
     img: haemo,
   };
 
+  const typeAnalysisData: ProjectData = {
+    title: "TypeAnalysis",
+    text: "Web app to fetch and analyze your historical TypeRacer performance data, providing detailed insights.",
+    href: "https://typeracer-analysis.streamlit.app/",
+    img: typeAnalysis,
+  };
+
+  const movieConnectionsData: ProjectData = {
+    title: "MovieConnections",
+    text: "Graph Theory analysis exploring the intricate connections between various movies.",
+    href: movieConnectionsPdf,
+    img: movieConnectionsImg,
+  };
+
   return (
     <div className="grid w-[100vw] place-items-center text-center">
       <div>
+        <CardReact {...typeAnalysisData} />
+        <CardReact {...movieConnectionsData} />
         <CardReact {...phonebookData} />
         <CardReact {...countryData} />
         <CardReact {...gymData} />
